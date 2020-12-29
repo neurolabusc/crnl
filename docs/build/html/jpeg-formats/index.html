@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D2D2D" />
+  
+  <title>Chris Rordens Neuropsychology Lab :: JPEG Format Variations</title>
+  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../_static/img/favicon-16x16.png">
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+
+  <link rel="stylesheet" href="../_static/css/insegel.css"/>
+
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'',
+        VERSION:'0.1',
+        LANGUAGE:'None',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+  </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
+
+</head>
+
+<body>
+  <div id="insegel-container">
+    <header>
+      <div id="logo-container">
+          
+          <a href="../index.html"><img src="../_static/img/logo.svg"></a>
+          
+
+      </div>
+      <div id="project-container">
+        <h1>Chris Rordens Neuropsychology Lab Documentation</h1>
+      </div>
+    </header>
+
+    <div id="content-container">
+
+      <div id="main-content-container">
+        <div id="main-content-header">
+          <h1>JPEG Format Variations</h1>
+        </div>
+        <div id="main-content">
+          
+  <div class="section" id="jpeg-format-variations">
+<h1>JPEG Format Variations<a class="headerlink" href="#jpeg-format-variations" title="Permalink to this headline">¶</a></h1>
+<p>Most people think that “JPEG” refers to a single format. However, while one format dominates most fields, in medical imaging there are different forms of JPEG images that require different tools to decode them.</p>
+<p>The <a class="reference external" href="http://en.wikipedia.org/wiki/JPEG">JPEG (Joint Photographic Experts Group)</a> defined a number of formats for saving images. In particular, this is a popular format for digital photographs, and is commonly used by digital cameras and web pages. However, some JPEG formats are also used in medical imaging. The expectations for medical imaging is a bit different than other fields, and there is a preference for higher precision data (e.g. saving an image as 65,535 shades of gray instead of just 256) and higher quality (less artifacts).</p>
+<a class="reference internal image-reference" href="../_images/jpeg.jpg"><img alt="../_images/jpeg.jpg" class="align-center" src="../_images/jpeg.jpg" style="width: 70%;" /></a>
+<p>This web page describes the different forms of JPEG compression specified for DICOM files, the dominant image format for medical imaging. The DICOM standard currently specifies 35 different ways an image could be embedded into a DICOM file. These formats are referred to as the  <a class="reference external" href="http://www.dicomlibrary.com/dicom/transfer-syntax/">Transfer Syntax</a>. Here I describe the most popular Transfer Syntaxes that use JPEG formats, and demonstrate how my  <a class="reference external" href="http://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage">dcm2nii</a>  software decodes these images.</p>
+<div class="section" id="baseline-jpeg">
+<h2>Baseline JPEG<a class="headerlink" href="#baseline-jpeg" title="Permalink to this headline">¶</a></h2>
+<p><strong>Common in DICOM:</strong> Transfer syntax 1.2.840.10008.1.2.4.50 describes the 8-bit standard classic lossy JPEG that is identical to the most common JPEG images created by digital cameras and used on the web page. These are easy to support – you can typically decode these using the API of your operating system, or for universal support use the popular  <a class="reference external" href="http://www.ijg.org">IJG library</a>  or the elegant  <a class="reference external" href="http://keyj.emphy.de/nanojpeg/">nanoJPEG</a>  library. To convert a dicom image to this format you can use  <a class="reference external" href="http://support.dcmtk.org/docs/dcmcjpeg.html">dcmcjpeg</a>  with the command “./dcmcjpeg +eb in.dcm out.dcm”.</p>
+<p><strong>Rare in DICOM</strong> . Transfer syntax 1.2.840.10008.1.2.4.51 describes the standard lossy JPEG format but extended to store higher precision (e.g. 12 rather than 8 bits per pixel, yielding up to 4095 distinct colors). Standard JPEG libraries can not handle these images. The typical solution is for developers to recompile a version of the IJG library to support this pixel format. However, the resulting library is no longer able to cope with the 8-bit images. Fortunately, this format appears to be exceptionally rare: someone who demands high precision data is probably not interested in lossy compression. If you insist on creating one of these images you can use the command “./dcmcjpeg +ee in.dcm out.dcm”.</p>
+</div>
+<div class="section" id="compressed-lossless-jpeg">
+<h2>Compressed lossless JPEG<a class="headerlink" href="#compressed-lossless-jpeg" title="Permalink to this headline">¶</a></h2>
+<p><strong>Common in DICOM.</strong> Transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70 refer to a  <a class="reference external" href="http://en.wikipedia.org/wiki/Lossless_JPEG">lossless JPEG</a>  format that is exceptionally rare <strong>outside</strong>  of the medical domain (and completely different from both the lossless JPEG-LS and lossless JPEG-2000 encoding formats). While this was fully described in the <a class="reference external" href="http://www.w3.org/Graphics/JPEG/itu-t81.pdf">JPEG ISO/IEC 10918-1:1994 T.81 (09/92)</a>, it did not gain traction outside of medical imaging (where GIF and PNG became the most popular lossless formats). This legacy lossless JPEG is a simple format, and only uses the  <a class="reference external" href="http://www.compressconsult.com/huffman/">Huffman encoding</a>  without the typical discrete cosine transforms (DCT). However, the fact that these images are typically saved with 16-bit precision means it is not supported by most libraries, and they generate an error saying they can not decode “SOF type 0xc3”. I have written my own library to support this format, though other tools (e.g. dcmtk) use custom-patched variations of the IJG library. This is not a very efficient compression method, and personally I would strongly recommend users investigate file-based compression (.zip, or disk driver enabled compression) over this arcane format. This is the default output of dcmcjpeg, probably explaining its widespread popularity, for example the command “./dcmcjpeg in.dcm out.dcm” generates a DICOM image with format 1.2.840.10008.1.2.4.70, while the command “./dcmcjpeg +el in.dcm out.dcm” generates an image with syntax 1.2.840.10008.1.2.4.57. You can also create these files withgdcmconv (e.g. ‘gdcmconv -J in.dcm out.dcm’).</p>
+</div>
+<div class="section" id="compress-lossless-jpeg-ls">
+<h2>Compress lossless JPEG-LS<a class="headerlink" href="#compress-lossless-jpeg-ls" title="Permalink to this headline">¶</a></h2>
+<p><strong>Rare in DICOM</strong>  In theory, the JPEG-LS standard looked promising: better compression than the ancient lossless JPEG, while offering similar compression ratios at far higher speeds to the much more complex JPEG2000 lossless standard. The JPEG-LS (ISO/IEC 14495-1:1999 / ITU-T.87) uses DICOMtransfer syntaxes 1.2.840.10008.1.2.4.80 and 1.2.840.10008.1.2.4.81. These images can be created with <a class="reference external" href="https://sourceforge.net/projects/gdcm/">gdcmconv</a>  (e.g. ‘gdcmconv -L in.dcm out.dcm’). Furthermore, you can configure  <a class="reference external" href="https://horosproject.org/">Horos</a>  to save to this format.</p>
+</div>
+<div class="section" id="compressed-jpeg2000-lossy-and-lossless">
+<h2>Compressed JPEG2000 (lossy and lossless)<a class="headerlink" href="#compressed-jpeg2000-lossy-and-lossless" title="Permalink to this headline">¶</a></h2>
+<p><strong>Rare in DICOM:</strong> Transfer syntaxes 1.2.840.10008.1.2.4.90, 1.2.840.10008.1.2.4.91 and 1.2.840.10008.1.2.4.92 refer to JPEG2000 based compression. This is very different from the other JPEG methods, using wavelets rather than DCT. This is a technically impressive format – at extreme compression ratios it does not have the blocky artifacts of conventional JPEG. At typical compression ratios it tends to produce files that are perhaps 15% smaller than conventional JPEG. However, adoption was been very slow, perhaps because conventional JPEG were good enough, JPEG2000 libraries are hard to integrate into software, JPEG2000 is relatively slow to process images, and <a class="reference external" href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">JPEG2000 was superceded by newer formats like HEIF</a>. In my experience the Jasper library is elegant, but it does have problems with some  <a class="reference external" href="http://en.wikipedia.org/wiki/JPEG_2000">16-bit images</a> . On the other hand, the  <a class="reference external" href="http://www.openjpeg.org">OpenJPEG</a>  library is cumbersome, the calls have changed a lot between versions, is poorly documented, but is very robust. In my experience, these images remain rare (perhaps since the free dcmcjpeg does not support them, while the professional  <a class="reference external" href="http://dicom.offis.de/dcmjp2k.php.en">dcmjp2k</a>  does).These images can be created with <a class="reference external" href="https://sourceforge.net/projects/gdcm/">gdcmconv</a>  (e.g. ‘gdcmconv -K in.dcm out.dcm’). Furthermore, you can configure <a class="reference external" href="https://horosproject.org/">Horos</a> to save to this format.</p>
+</div>
+<div class="section" id="comparing-lossless-jpeg-compression">
+<h2>Comparing lossless JPEG compression<a class="headerlink" href="#comparing-lossless-jpeg-compression" title="Permalink to this headline">¶</a></h2>
+<p>Since we tend to worry about the consequences of lossless compression, the comparison of the various compression methods is of interest. There are several reasons why you may want to save your raw DICOM data uncompressed: disk space is inexpensive relative to the cost of scanning, decoding compressed images is slow, many tools do not support compressed DICOMs and the fact that while these tools compress the image data, they do not compress the verbose header (so you may be better off simply archiving DICOM data in popular file-level compression formats like .zip).</p>
+<p>For those still interested in choosing a lossless compressed DICOM format, here is a quick  <a class="reference external" href="https://github.com/rordenlab/dcm2niix/blob/master/console/charls/README.md">comparison</a> for MRI data. Note that in this example, JPEG-LS reduces the file size to 60% of the raw image, takes 30% longer to compress than creating JPEG lossless, and is five times slower to decode (open, convert, view) than raw data. This table suggests that the JPEG2000 as implemented in OpenJPEG is exceptionally slow for both compression and decompression. One the other hand, JPEG-LS finds provides good compression with a modest performance penalty.</p>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">JPEG Performance</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Size</p></th>
+<th class="head"><p>Encode</p></th>
+<th class="head"><p>Decode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Raw</p></td>
+<td><p>1.00</p></td>
+<td></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>lossless JPEG</p></td>
+<td><p>0.65</p></td>
+<td><p>1.0</p></td>
+<td><p>5.0</p></td>
+</tr>
+<tr class="row-even"><td><p>JPEG-LS</p></td>
+<td><p>0.60</p></td>
+<td><p>1.3</p></td>
+<td><p>7.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>JPEG-2000 Lossless</p></td>
+<td><p>0.61</p></td>
+<td><p>3.9</p></td>
+<td><p>71.6</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sample-source-code">
+<h2>Sample source code<a class="headerlink" href="#sample-source-code" title="Permalink to this headline">¶</a></h2>
+<p>Attached below are three C programs that illustrate converting JPEG compressed DICOM images to uncompressed TIFF images. One example uses NanoJPEG for conventional JPEG images. Another uses my own code for lossless JPEG. The final example uses OpenJPEG for JPEG2000. They all use  <a class="reference external" href="http://paulbourke.net/dataformats/tiff/">Paul Bourke’s code</a>  to generate TIFF images (I chose TIFF since it is a popular format that supports 16-bit images). The sample images come from the  <a class="reference external" href="http://www.creatis.insa-lyon.fr/%7Ejpr/PUBLIC/gdcm/gdcmSampleData/ColorDataSetLeadTool/">Lead Tools</a>  sample images.</p>
+</div>
+</div>
+
+
+        </div>
+      </div>
+
+      <div id="side-menu-container">
+
+        <div id="search" role="search">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" placeholder="Search..." />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+</div>
+
+        <div id="side-menu" role="navigation">
+
+          
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../asl/index.html">Arterial Spin Labeling (ASL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blindside/index.html">Blindside</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bmp_contrast/index.html">Bitmap Contrast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CenterOfCancellation/index.html">Center of Cancellation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directions/index.html">Directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diyFmri/index.html">DIY fMRI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dti/index.html">DTI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elecro/index.html">ELEcro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../EMGRecorder/index.html">EMG Recorder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fieldmaps/index.html">Fieldmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fmriSimulator/index.html">fMRI Simulator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JPEG Format Variations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mriconcepts/index.html">MRI Contrast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mricro/index.html">MRIcro for macOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/index.html">MRIcroGL Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/extract/index.html">MRIcroGL Object Extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/gradients/index.html">MRIcroGL Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/shaders/index.html">MRIcroGL Shaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-source-eegecgemg/index.html">DIY Electrophysiology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizingspmfsl/index.html">Optimizing FSL and SPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscilloscope/index.html">Oscilloscope using Teensy or Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part/index.html">Physiological Artifact Removal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../psyc450/index.html">Sensation and Perception (PSYC450)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../psyc589888/index.html">Image to Inference (PSYC589/888)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwi/index.html">Perfusion-weighted imaging (PWI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">Quality Assurance (QA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spatial/index.html">Spatial Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spm8-scripts/index.html">spmScripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stc/index.html">Slice Time Correction (STC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stimsync/index.html">StimSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stimsync-api/index.html">StimSync API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal/index.html">Temporal Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications/index.html">Publications</a></li>
+</ul>
+
+  
+
+
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+<footer>
+    <div id="footer-info">
+        <ul id="build-details">
+            
+                <li class="footer-element">
+                    
+                        <a href="../_sources/jpeg-formats/index.rst.txt" rel="nofollow"> source</a>
+                    
+                </li>
+            
+
+            
+
+            
+        </ul>
+        <div id="credit">
+            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
+
+        </div>
+    </div>
+
+    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
+
+    <script type="text/javascript">
+      $("#menu-toggle").click(function() {
+        $("#menu-toggle").toggleClass("toggled");
+        $("#side-menu-container").slideToggle(300);
+      });
+    </script>
+
+</footer> 
+
+</div>
+
+</body>
+</html>

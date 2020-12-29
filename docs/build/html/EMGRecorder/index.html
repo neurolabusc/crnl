@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D2D2D" />
+  
+  <title>Chris Rordens Neuropsychology Lab :: EMG Recorder</title>
+  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../_static/img/favicon-16x16.png">
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+
+  <link rel="stylesheet" href="../_static/css/insegel.css"/>
+
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'',
+        VERSION:'0.1',
+        LANGUAGE:'None',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+  </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
+
+</head>
+
+<body>
+  <div id="insegel-container">
+    <header>
+      <div id="logo-container">
+          
+          <a href="../index.html"><img src="../_static/img/logo.svg"></a>
+          
+
+      </div>
+      <div id="project-container">
+        <h1>Chris Rordens Neuropsychology Lab Documentation</h1>
+      </div>
+    </header>
+
+    <div id="content-container">
+
+      <div id="main-content-container">
+        <div id="main-content-header">
+          <h1>EMG Recorder</h1>
+        </div>
+        <div id="main-content">
+          
+  <div class="section" id="emg-recorder">
+<h1>EMG Recorder<a class="headerlink" href="#emg-recorder" title="Permalink to this headline">¶</a></h1>
+<p>Twente Medical Systems International (TMSi) produces a series of polygraphy devices that can measure the electrical signals from muscles (ECG, EMG) or the brain (EEG, ERP), for example, we use their <a class="reference external" href="http://www.tmsi.com/?id=5">Mobi</a> to measure hand movements. Our free EMG Recorder software uses bluetooth to display and store this data in realtime. It should be noted that you can also use TMSi’s own <a class="reference external" href="http://www.tmsi.com/?id=3">PortiLab</a> software to store data. In contrast, our software is simple to use and includes a couple features that are useful for us (using a digital input to start recording, saving to the BrainVision format, etc).</p>
+<a class="reference internal image-reference" href="../_images/mobi8.png"><img alt="../_images/mobi8.png" class="align-center" src="../_images/mobi8.png" style="width: 70%;" /></a>
+<div class="section" id="acquiring-data">
+<h2>Acquiring data<a class="headerlink" href="#acquiring-data" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>To run a study, simply launch the software – it should automatically detect your Blue Tooth hardware, and the maximum number of channels as well as maximum sample rate of your hardware will be displayed in the title bar. Choose View/Preferences to ensure that your desired settings will be used. Next choose Edit/Acquire to start recording data. Finally, choose File/SaveData to store a recording to disk. It is that easy.</p></li>
+</ul>
+</div></blockquote>
+<p>The View/Preferences command allows you to adjust a few settings.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>High pass filter: EMG signals tend to drift up and down over time. A high pass filter corrects for this, for EMG using a 10-20Hz high pass filter is typical. If set to zero, no filter is applied. This filter only influences the appearance of the data on the screen – the raw signal will be stored to disk.</p></li>
+<li><p>Sample rate (Hz): sets how rapidly the electrodes are measured. Our TMSi systems have a maximum sample rate of 2048. EMGs have a surprising amount of high frequency information, so it is probably worth using the maximum value you system supports.</p></li>
+<li><p>Max recording (sec): This software will start collecting data when you choose Edit/Acquire and continue until you choose File/Save or this the time you specify here elapses. For example, if you want to record data for up to 30 minutes, set this to 1800 seconds.</p></li>
+<li><p>Trigger channel: often we want to observe traces prior to starting an experiment, for example to make sure the electrodes have a good signal. However, we only need to store data that is acquired after the experiment starts. Therefore, you can set value so the recording is reset when a trigger signal is recorded by the hardware. With our Mobi system, channel 7 records the optical trigger signal. If you set this to zero the software will store data from the moment you choose Edit/Acquire. If you forget to send a trigger signal, data will also be stored from the time of the Edit/Acquire command.</p></li>
+<li><p>For each channel of your hardware, you will see two check boxes: A “Record” checkbox and a “Filter” checkbox. Only “Recorded” channels are displayed on screen and stored to disk. Only a channel that has both “Record” and “Filter” checked will be subjected to the High Pass Filter described earlier. With our Mobi system we do not filter Channel 7 (optical trigger) and Channel 8 (a saw pattern that ensures there were no bluetooth transmission errors). Note that a combination of high sample rates and recorded channels may exceed the bandwidth available. If you are not planning to analyze a channel, make sure the electrode lead is unplugged from the hardware, so that no data will be transmitted.</p></li>
+</ul>
+</div></blockquote>
+<p>You will get an error message if the software can not detect the hardware at startup. The most common problem is that the hardware is not switched on, our the blue tooth hardware is not paired with your computer. First, quit the recording program and check the power light on your hardware. Second, check the BlueTooth configuration control panel on your hardware, finally you can change the “ComPort” number text file named “.ini” in the same folder as the recording software (this number should match what you see in your control panel, make sure the recording software is not running when you change this). Once you correct your problem, restart the recording software.</p>
+<p>You can adjust many settings by editing the “.ini” text file that is in the same folder as the recording program. Make sure the program is not running when you edit this file. If you do not see this file, start and quit the recording software, and it should create a new file. Here are a few of the settings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>F1: This numbers specify the fundamental frequencies of the dummy trace that is created if you choose Edit/Acquire without any hardware. For example, if you choose F1=17 a data stream with 17Hz signals will be generated.</p></li>
+<li><p>AudioChannel: Specifies which channel will be used to create an audio signal if View/Audio is selected. It is often useful to hear EMGs, as there is a different sound for a motor deficit due to brain injury versus peripheral injury.</p></li>
+<li><p>Trace/Offline/Background specify the colors used for the graphs. These colors are 24-bits stored as Hex, such that 000000 is black, FFFFFF is white and AA0000 is a medium-bright red.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>For our Transcranial Magnetic Current Stimulation (TMS) studies, we want to initially calibrate the intensity of the TMS pulse. The standard way of doing this is to place the TMS wand over the primary motor cortex and generate pulses that have a 50% chance of eliciting a motor evoked potential (MEP) with an intensity of at least 100 mV. The EMG recorder’s Events/ShowEvents allows you to see the size of the response generated by the most recent trigger. For our studies, we send a trigger signal with each TMS pulse. The recorder software indicates the peak-to-peak intensity of this response (in the figure above, the response 84 mV [84000 uV]) We use the  <a class="reference external" href="http://clinicalresearcher.org/software.htm">TMS Motor Threshold Assessment Tool</a>  to calibrate our transcranial magnetic stimulation amplitude. The events menu allows you to adjust the scale, duration and time window for detecting peak-to-peak amplitudes.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="controlling-the-emg-recorder-with-your-own-software">
+<h2>Controlling the EMG Recorder with your own software<a class="headerlink" href="#controlling-the-emg-recorder-with-your-own-software" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>You can use you own code to control this software. Specifically, you can start or end recording sessions and send event markers. This uses the ‘SendMessage’ Windows API function, which you can implement in most programming languages. Here is sample Pascal code</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">SendDataDigit</span><span class="p">(</span> <span class="n">I</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span> <span class="n">F</span><span class="o">:</span> <span class="n">TForm</span><span class="p">)</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<span class="c1">//I sends a command to the EEG recorder</span>
+<span class="c1">//  I= -1 starts a new recording</span>
+<span class="c1">//  I= -2 stops and saves a recording</span>
+<span class="c1">//  I&amp;gt; 0 creates an event marker that will be saved as a BrainVision VMRK file</span>
+<span class="c1">//   I= 1 saves a marker &#39;cond1&#39;</span>
+<span class="c1">//   I= 123 saves a marker &#39;cond123&#39;</span>
+<span class="c1">//  The temporal accuracy of events may be off by a couple msec</span>
+<span class="c1">//    Send an optical pulse to precisely mark the onset time</span>
+<span class="c1">//Returns positive integer value if successful</span>
+<span class="k">var</span>
+  <span class="n">receiverHandle</span>  <span class="o">:</span> <span class="kt">THandle</span><span class="o">;</span>
+  <span class="n">copyDataStruct</span> <span class="o">:</span> <span class="n">TCopyDataStruct</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">result</span> <span class="o">:=-</span><span class="mi">1</span><span class="o">;</span>
+  <span class="n">copyDataStruct</span><span class="o">.</span><span class="n">dwData</span> <span class="o">:=</span> <span class="n">I</span><span class="o">;</span> <span class="c1">//use it to identify the message contents</span>
+  <span class="n">copyDataStruct</span><span class="o">.</span><span class="n">cbData</span> <span class="o">:=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="n">copyDataStruct</span><span class="o">.</span><span class="n">lpData</span> <span class="o">:=</span> <span class="k">nil</span><span class="o">;</span>
+  <span class="n">receiverHandle</span> <span class="o">:=</span> <span class="n">FindWindow</span><span class="p">(</span><span class="kt">PChar</span><span class="p">(</span><span class="s">&#39;TMobiRecordForm&#39;</span><span class="p">)</span><span class="o">,</span><span class="kt">PChar</span><span class="p">(</span><span class="s">&#39;MobiRecordForm&#39;</span><span class="p">))</span><span class="o">;</span>
+  <span class="k">if</span> <span class="n">receiverHandle</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span>
+    <span class="k">Exit</span><span class="o">;</span>
+  <span class="bp">result</span> <span class="o">:=</span> <span class="n">SendMessage</span><span class="p">(</span><span class="n">receiverHandle</span><span class="o">,</span> <span class="n">WM_COPYDATA</span><span class="o">,</span> <span class="kt">Integer</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">Handle</span><span class="p">)</span><span class="o">,</span> <span class="kt">Integer</span><span class="p">(</span><span class="o">@</span><span class="n">copyDataStruct</span><span class="p">))</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>My  <a class="reference external" href="http://www.mccauslandcenter.sc.edu/crnl/tools/elecro">ELEcro</a>  is a program that can filter and average data collected with EMG Recorder. It reads and writes BrainVision Analyzer (.VHDR), EDF (.EDF) and TMS32 (.S00) file formats.</p></li>
+<li><p>My  <a class="reference external" href="http://www.mccauslandcenter.sc.edu/crnl/tools/temporal">Biquad Filters</a>  web page is an interactive demonstration of the high pass, low pass and notch filters available in ELEcro and EMG Recorder.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="downloads">
+<h2>Downloads<a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h2>
+<p>For Windows: you will need to register the dll with your system. Launch a terminal window, change to the directory where you want to keep the files and type ‘regsvr32 PortiSerialSDK.dll’</p>
+</div>
+</div>
+
+
+        </div>
+      </div>
+
+      <div id="side-menu-container">
+
+        <div id="search" role="search">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" placeholder="Search..." />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+</div>
+
+        <div id="side-menu" role="navigation">
+
+          
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../asl/index.html">Arterial Spin Labeling (ASL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blindside/index.html">Blindside</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bmp_contrast/index.html">Bitmap Contrast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CenterOfCancellation/index.html">Center of Cancellation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directions/index.html">Directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diyFmri/index.html">DIY fMRI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dti/index.html">DTI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elecro/index.html">ELEcro</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EMG Recorder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fieldmaps/index.html">Fieldmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fmriSimulator/index.html">fMRI Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jpeg-formats/index.html">JPEG Format Variations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mriconcepts/index.html">MRI Contrast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mricro/index.html">MRIcro for macOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/index.html">MRIcroGL Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/extract/index.html">MRIcroGL Object Extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/gradients/index.html">MRIcroGL Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/shaders/index.html">MRIcroGL Shaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-source-eegecgemg/index.html">DIY Electrophysiology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizingspmfsl/index.html">Optimizing FSL and SPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscilloscope/index.html">Oscilloscope using Teensy or Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part/index.html">Physiological Artifact Removal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../psyc450/index.html">Sensation and Perception (PSYC450)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../psyc589888/index.html">Image to Inference (PSYC589/888)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwi/index.html">Perfusion-weighted imaging (PWI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">Quality Assurance (QA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spatial/index.html">Spatial Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spm8-scripts/index.html">spmScripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stc/index.html">Slice Time Correction (STC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stimsync/index.html">StimSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stimsync-api/index.html">StimSync API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal/index.html">Temporal Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications/index.html">Publications</a></li>
+</ul>
+
+  
+
+
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+<footer>
+    <div id="footer-info">
+        <ul id="build-details">
+            
+                <li class="footer-element">
+                    
+                        <a href="../_sources/EMGRecorder/index.rst.txt" rel="nofollow"> source</a>
+                    
+                </li>
+            
+
+            
+
+            
+        </ul>
+        <div id="credit">
+            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
+
+        </div>
+    </div>
+
+    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
+
+    <script type="text/javascript">
+      $("#menu-toggle").click(function() {
+        $("#menu-toggle").toggleClass("toggled");
+        $("#side-menu-container").slideToggle(300);
+      });
+    </script>
+
+</footer> 
+
+</div>
+
+</body>
+</html>
