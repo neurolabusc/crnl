@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D2D2D" />
+  
+  <title>Chris Rordens Neuropsychology Lab :: Quality Assurance (QA)</title>
+  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../_static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../_static/img/favicon-16x16.png">
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+
+  <link rel="stylesheet" href="../_static/css/insegel.css"/>
+
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'',
+        VERSION:'0.1',
+        LANGUAGE:'None',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+  </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
+
+</head>
+
+<body>
+  <div id="insegel-container">
+    <header>
+      <div id="logo-container">
+          
+          <a href="../index.html"><img src="../_static/img/logo.svg"></a>
+          
+
+      </div>
+      <div id="project-container">
+        <h1>Chris Rordens Neuropsychology Lab Documentation</h1>
+      </div>
+    </header>
+
+    <div id="content-container">
+
+      <div id="main-content-container">
+        <div id="main-content-header">
+          <h1>Quality Assurance (QA)</h1>
+        </div>
+        <div id="main-content">
+          
+  <div class="section" id="quality-assurance-qa">
+<h1>Quality Assurance (QA)<a class="headerlink" href="#quality-assurance-qa" title="Permalink to this headline">¶</a></h1>
+<p>With MRI a noisy image can contaminate your whole dataset, substantially reducing your statistical power. It is important to have a rigorous method to ensure the quality of the raw data and to establish that the automated processing worked as expected. Two common sources of error are artifacts in the raw data and poor normalization quality. This web page describes a simple automated Matlab script that can assist your manual quality assurance (QA) protocol.</p>
+<a class="reference internal image-reference" href="../_images/qa.jpg"><img alt="../_images/qa.jpg" class="align-center" src="../_images/qa.jpg" style="width: 30%;" /></a>
+<div class="section" id="checking-fmri-and-resting-state-data">
+<h2>Checking fMRI and resting state data<a class="headerlink" href="#checking-fmri-and-resting-state-data" title="Permalink to this headline">¶</a></h2>
+<p>This script identifies 3D volumes that look unusual. It does this both for the overall image brightness (finding volumes where the pattern of brightness differs from the mean for the series) as well as changes in brightness (identifying volumes that are most dissimilar to the previous volume in time). It generates a visual plot (shown on the right) and a tab-delimited text file (that you can view with your favorite spread sheet software) that shows these changes across time and with respect to changes in head position. For example, if you look at the plot illustrated on this web page, note that volumes that appear unusual based on overall Z-score (red) or change in brightness (green) are associated with periods when the individual made relatively large head movements (blue). To conduct this analysis, you provide your series of brain images as well as the motion-correction parameters from FSL (a text file with the extension .par) or SPM (named rp_*.txt). In addition the software generates images that show the voxelwise patterns for mean, standard deviation and signal-to-noise. Therefore, this software combines the QA suggestions of Power et al. (2012) for illustrating motion related changes and the method of Murhpy et al. (2007). As described by Power et al., these images can be useful for identifies volumes that can contaminate your analysis.</p>
+<p>You can download the <a class="reference external" href="https://github.com/neurolabusc/spmScripts">nii_qa_moco</a> script from my website. It requires Matlab and SPM.</p>
+</div>
+<div class="section" id="checking-normalization-of-anatomical-scans">
+<h2>Checking Normalization of anatomical scans<a class="headerlink" href="#checking-normalization-of-anatomical-scans" title="Permalink to this headline">¶</a></h2>
+<p>We can run a similar script to check the quality of normalization across participants. The differences here is that we do not have motion correction files and we will have to deal with the fast that the absolute image brightness is likely to be very different between participants (due to factors such as differences in shim, head size, etc). To run the script, type “nii_mean_std” from the Matlab command line. You will be asked to select the images you wish to analyze. These can be compressed (“.nii.gz” as generated by FSL) or uncompressed (“.hdr” or “.nii” as common with SPM) NIfTI images. This script can be run on a 4D dataset (e.g. a fMRI time series or a DTI series) or multiple 3D images that are expected to be aligned with each other (e.g. T1 scans from multiple individuals after normalization). The script computes a mean and standard deviation image for the population and then reports the mean Z-score for each image in the set. As output it generates a mean image, a standard deviation image and a <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/17126038">signal-to-noise ratio (SNR) image</a> . You can visually inspect the volumes that were reported to have the most extreme values, and also inspect the mean, standard deviation and SNR maps to see if there are any slice interference effects or unusual dropouts of signal. When you run this script it will ask you if you want to normalize the intensity of each image – this is generally not required for data from the same session (e.g. a fMRI session), but it can be very helpful in assessing data from different individuals (e.g. T1 scans after normalization, where white matter always appears brighter than gray matter but the actual brightness is not calibrated between individuals).</p>
+<p>You can download the ** <a class="reference external" href="https://github.com/neurolabusc/spmScripts">nii_mean_std</a> **  script from my website. It requires Matlab and SPM.</p>
+<a class="reference internal image-reference" href="../_images/tsnr.jpg"><img alt="../_images/tsnr.jpg" class="align-center" src="../_images/tsnr.jpg" style="width: 30%;" /></a>
+</div>
+<div class="section" id="general-uses">
+<h2>General Uses<a class="headerlink" href="#general-uses" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Both scripts can assist other visual inspections, such as using a yoked-view to inspect how well normalization matched a template or inspecting the motion correction plots to look for abnormal types of head motion. Here are some links for artifacts you should be familiar with:</p></li>
+<li><p><a class="reference external" href="http://practicalfmri.blogspot.com/2011/11/understanding-fmri-artifacts.html">Overview of artifacts</a>  that are common for EPI fMRI sequences</p></li>
+<li><p><a class="reference external" href="http://imaging.mrc-cbu.cam.ac.uk/imaging/CommonArtefacts#spinhistory">Spin history effects</a>  often seen during head motion with interleaved acquisitions.</p></li>
+<li><p><a class="reference external" href="http://www.mritutor.org/mritutor/artifact.htm">Various common MRI artifacts</a></p></li>
+<li><p>MRI reconstruciton errors</p></li>
+<li><p>Poor normalization between individuals: this is often caused by a poor starting estimate. My ` nii_setOrigin12 &lt;<a class="reference external" href="https://github.com/neurolabusc/spmScripts">https://github.com/neurolabusc/spmScripts</a>&gt;`_  script can help reduce these.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pablo Velasco’s  <a class="reference external" href="http://cbi.nyu.edu/software/dataQuality.php">Data Quality tool</a> .</p></li>
+<li><p><a class="reference external" href="http://imaging.mrc-cbu.cam.ac.uk/imaging/DataDiagnostics">The CBU’s seminal web page describing diagnostics for FMRI</a>.</p></li>
+<li><p><a class="reference external" href="http://www.nitrc.org/projects/artifact_detect/">Artifact Detection Tools (ART)</a>.</p></li>
+<li><p>Power JD, Barnes KA, Snyder AZ, Schlaggar BL, Petersen SE. ( <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/22019881">2012</a> ) Spurious but systematic correlations in functional connectivity MRI networks arise from subject motion. Neuroimage. 59(3):2142-54.</p></li>
+<li><p><a class="reference external" href="http://fcon_1000.projects.nitrc.org/indi/retro/Power2012.html">Sample datasets</a></p></li>
+<li><p>Murphy K, Bodurka J, Bandettini PA. ( <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/17126038">2007</a> ) How long to scan? The relationship between fMRI temporal signal to noise ratio and necessary scan duration. Neuroimage. 34(2):565-74.</p></li>
+<li><p>Stöcker T, Schneider F, Klein M, Habel U, Kellermann T, Zilles K, Shah NJ. ( <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/15846770">2005</a> ) Automated quality assurance routines for fMRI data applied to a multicenter study. Hum Brain Mapp. 2005 Jun;25(2):237-46.</p></li>
+<li><p>Davids M, Zöllner FG, Ruttorf M, Nees F, Flor H, Schumann G, Schad LR ( <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/24602825">2014</a> ) Fully-automated quality assurance in multi-center studies using MRI phantom measurements. Magn Reson Imaging. 32(6):771-80.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+        </div>
+      </div>
+
+      <div id="side-menu-container">
+
+        <div id="search" role="search">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" placeholder="Search..." />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+</div>
+
+        <div id="side-menu" role="navigation">
+
+          
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../asl/index.html">Arterial Spin Labeling (ASL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blindside/index.html">Blindside</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bmp_contrast/index.html">Bitmap Contrast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CenterOfCancellation/index.html">Center of Cancellation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directions/index.html">Directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diyFmri/index.html">DIY fMRI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dti/index.html">DTI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elecro/index.html">ELEcro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../EMGRecorder/index.html">EMG Recorder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fieldmaps/index.html">Fieldmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fmriSimulator/index.html">fMRI Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jpeg-formats/index.html">JPEG Format Variations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mriconcepts/index.html">MRI Contrast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mricro/index.html">MRIcro for macOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/index.html">MRIcroGL Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/extract/index.html">MRIcroGL Object Extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/gradients/index.html">MRIcroGL Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gl/shaders/index.html">MRIcroGL Shaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-source-eegecgemg/index.html">DIY Electrophysiology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimizingspmfsl/index.html">Optimizing FSL and SPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscilloscope/index.html">Oscilloscope using Teensy or Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part/index.html">Physiological Artifact Removal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../psyc450/index.html">Sensation and Perception (PSYC450)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../psyc589888/index.html">Image to Inference (PSYC589/888)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwi/index.html">Perfusion-weighted imaging (PWI)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quality Assurance (QA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spatial/index.html">Spatial Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spm8-scripts/index.html">spmScripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stc/index.html">Slice Time Correction (STC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stimsync/index.html">StimSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stimsync-api/index.html">StimSync API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal/index.html">Temporal Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications/index.html">Publications</a></li>
+</ul>
+
+  
+
+
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+<footer>
+    <div id="footer-info">
+        <ul id="build-details">
+            
+                <li class="footer-element">
+                    
+                        <a href="../_sources/qa/index.rst.txt" rel="nofollow"> source</a>
+                    
+                </li>
+            
+
+            
+
+            
+        </ul>
+        <div id="credit">
+            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
+
+        </div>
+    </div>
+
+    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
+
+    <script type="text/javascript">
+      $("#menu-toggle").click(function() {
+        $("#menu-toggle").toggleClass("toggled");
+        $("#side-menu-container").slideToggle(300);
+      });
+    </script>
+
+</footer> 
+
+</div>
+
+</body>
+</html>
