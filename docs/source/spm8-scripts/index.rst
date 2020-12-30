@@ -9,7 +9,7 @@ spmScripts
 Statistical Parametric Mapping (SPM) comes with a nice user interface, but sometimes small Matlab scripts can help answer your research question. A quick search of the web is usually able to find someone else who has encountered the same problem and written a Matlab script. Here are some useful links for SPM scripting.
 
  - `Wiki introduction to SPM scripting <http://en.wikibooks.org/wiki/SPM/Programming_intro>`_ 
- - John Ashburners’ Gems for ( `old versions of SPM <http://www-personal.umich.edu/%7Enichols/JohnsGems.html>`_ , `SPM2 <http://www-personal.umich.edu/%7Enichols/JohnsGems2.html/>`_ , `SPM5 <http://www-personal.umich.edu/%7Enichols/JohnsGems5.html>`_ )
+ - John Ashburners’ Gems for ( `old versions of SPM <https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/nichols/scripts/spm/johnsgems/>`_ )
  - `Ged Ridgway’s useful scripts <http://www.cs.ucl.ac.uk/staff/g.ridgway/vbm/>`_ 
  - `Jimmy’s Toolbox <http://www.rotman-baycrest.on.ca/%7Ejimmy/>`_ .
  - `Martin Pyka’s SPM for Programmers web pages <http://spm.martinpyka.de/>`_ elegantly illustratea several SPM functions.

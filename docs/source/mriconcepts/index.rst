@@ -37,6 +37,5 @@ TR and flip angle
 With short delays between RF pulses (TRs) there will be little longitudinal recovery (T1 relaxation). In this case, sending in a strong RF pulse to induce a 90-degree flip will lead to less signal than a weaker pulse that induces a shallower flip angle. The Ernst angle refers to the optimal flip angle for a given TR. This graph shows the Ernst angle as a function of TR (blue line). The graph also shows the relative signal versus an infinite TR (green). This latter effect shows the diminishing returns seen with shorter TRs: for example a TR of 500ms returns 42% signal (relative to infinite TR), while a 1000m scan returns 59%. Therefore, while scanning twice as fast will provide twice as many samples, each sample will be noisier. Note that as previously described T1 varies with both tissue type and field strength. This graph uses Mark Cohen’s suggestion for an approximate T1 of 1400ms for the brain using a 3T scanner (if your scanner is not 3T, take a look at “T1 and field strength” for approximations).
 
  - `Wikipedia entry for Ernst Angle <http://en.wikipedia.org/wiki/Ernst_angle>`_ 
- - `Mark Cohen’s flip angle <http://airto.ccn.ucla.edu/BMCweb/HowTo/CalcFlip.html>`_  (which inspired my Matlab script)
- - `Martín-Pastor’s online calculator <http://desoft03.usc.es/rmnweb/calibrations/Ernstcalculator.htm>`_ 
+ - `Martín-Pastor’s online calculator <http://www.mritoolbox.com/ErnstAngle.html>`_ 
  - `Flip Angle for T2* (fMRI BOLD) contrast <http://www.ncbi.nlm.nih.gov/pubmed/21073963>`_

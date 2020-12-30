@@ -14,8 +14,7 @@ This image shows the results of this script: the leftmost image shows the origin
 Requirements and Usage
 -------------------------------------------
 
-
- -  You can download the Matlab code named `bmp_contrast.m from my GitHub repository <https://github.com/neurolabusc/spmScripts>`_, you will also need a copy of Matlab and images in formats that Matlab can read (png, jpeg, tiff, etc). This code does **NOT**  require a license for the Matlab Image Processing Toolbox. Launch Matlab and make sure the bmp_contrast.m file is in your current directory. You can then simply type bmp_contrast from the Matlab command line – a dialog will allow you to choose the images you will want to manipulate and then a dialog window will ask you to provide three values:
+You can download the Matlab code named `bmp_contrast.m from my GitHub repository <https://github.com/neurolabusc/spmScripts>`_, you will also need a copy of Matlab and images in formats that Matlab can read (png, jpeg, tiff, etc). This code does **NOT**  require a license for the Matlab Image Processing Toolbox. Launch Matlab and make sure the bmp_contrast.m file is in your current directory. You can then simply type bmp_contrast from the Matlab command line – a dialog will allow you to choose the images you will want to manipulate and then a dialog window will ask you to provide three values:
 
  - Desired contrast from 0..1. A value near 0.5 means no change, smaller values lead to reduced contrast and larger values lead to increased contrast. The default is 0.8 leading to an image with substantially more contrast
  - Desired brightness from 0..1. A value near 0.5 will have mid-gray brightness, lower values will lead to dark output, while higher values lead to brighter output. You can also specify a negative value (e.g. -1): in this case the brightness is adjusted based on the input image so that the output will have similar brightness. The default is -1 (automatic brightness control).
@@ -23,25 +22,18 @@ Requirements and Usage
 
 The software also includes a file named bmp_contrast_batch which allows you to apply hundreds of contrast/brightness levels to hundreds of input images with just a few clicks – and the output images are given sensible file names.
 
-
-
 Technical Notes
 -------------------------------------------
 
-
  -  Here is what this software does.
-
-
- - The image is loaded.
- - Image values are scaled to range from 0..1 (using 64-bit double precision values) regardless of whether the original image was stored with 8-bit (0..256) or 16-bit (0..65535) precision.
- - If it is a color image, the original red, green, blue color components are converted to YUV. This allows us to transform the intensity (Y) while preserving the relative color. This step is skipped for grayscale images (as these natively only store intensity).
- - If you requested brightness autobalance, the `log-average luminance <http://www.cs.utah.edu/%7Ereinhard/cdrom/tonemap.pdf>`_ is computed as an estimate for the global image brightness. The software than tests 256 different bias values with your selected gain value to identify the bias value that best maintains the orginal luminance.
- - An intensity transform is generated based on your contrast and brightness preferences. This is then applied to the intensity values of your image.
- - For color images, the YUV data is converted back to red, green and blue channels.
- - If requested, histograms of the images before and after transform as well as a graph of the transform function are displayed.
- - The newly transformed image is saved to disk.
-
-
+	 - The image is loaded.
+	 - Image values are scaled to range from 0..1 (using 64-bit double precision values) regardless of whether the original image was stored with 8-bit (0..256) or 16-bit (0..65535) precision.
+	 - If it is a color image, the original red, green, blue color components are converted to YUV. This allows us to transform the intensity (Y) while preserving the relative color. This step is skipped for grayscale images (as these natively only store intensity).
+	 - If you requested brightness autobalance, the `log-average luminance <http://www.cs.utah.edu/%7Ereinhard/cdrom/tonemap.pdf>`_ is computed as an estimate for the global image brightness. The software than tests 256 different bias values with your selected gain value to identify the bias value that best maintains the orginal luminance.
+	 - An intensity transform is generated based on your contrast and brightness preferences. This is then applied to the intensity values of your image.
+	 - For color images, the YUV data is converted back to red, green and blue channels.
+	 - If requested, histograms of the images before and after transform as well as a graph of the transform function are displayed.
+	 - The newly transformed image is saved to disk.
 
 Links
 -------------------------------------------
@@ -50,6 +42,3 @@ Links
  - The Matlab Image Processing Toolbox (which requires a separate license from Matlab) can be used to tune `image contrat <http://www.mathworks.com/products/image/examples.html?file=/products/demos/shipping/images/ipexcontrast.html>`_.
  - My code implements `Christophe Schlick’s bias and gain algorithm <http://dept-info.labri.fr/%7Eschlick/DOC/gem2.html>`_ for the nonlinear transforms.
  - The book `Advanced High Dynamic Range Imaging: Theory and Practice <http://www.amazon.com/Advanced-High-Dynamic-Range-Imaging/dp/1568817193>`_ is a great reference for image processing. The authors also have a `website with Matlab code from the book <http://www.banterle.com/hdrbook/index.php>`_.
- - `Earl F. Glynn <http://www.efg2.com/Lab/Graphics/Colors/YUV.htm>`_ has a great page on RGB to YUV conversion with examples from TV data. The examples show how brightness data is often stored with much higher spatial precision than the color data, as the human eye is much more sensitive to brightness than hue. This same trick is typically used to aid JPEG compression.
-
-

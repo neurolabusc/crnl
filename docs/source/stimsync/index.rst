@@ -9,10 +9,10 @@ StimSync
  :align: center
 
 
-You can `Download all schematics, source code, software, firmware and text files. <https://github.com/TaylorHanayik/StimSync>`_  Includes examples for `EPrime <http://www.pstnet.com/eprime.cfm>`_ , `OpenSesame <http://osdoc.cogsci.nl/>`_ , `Presentation <http://www.neurobs.com/>`_ , `PsychoPy <http://www.psychopy.org/>`_ , and `psychtoolbox <http://psychtoolbox.org/HomePage>`_ .
+You can `Download all schematics, source code, software, firmware and text files. <https://github.com/TaylorHanayik/StimSync>`_  Includes examples for `EPrime <http://www.pstnet.com/eprime.cfm>`_ , `OpenSesame <http://osdoc.cogsci.nl/>`_ , `Presentation <http://www.neurobs.com/>`_ , `PsychoPy <https://www.psychopy.org/>`_ , and `psychtoolbox <http://psychtoolbox.org>`_ .
 
- -  `StimSync API page <http://www.mccauslandcenter.sc.edu/CRNL/tools/stimsync-api>`_ provides full documentation for advanced users, and details on how to validate the device with your own hardware and software.
- -  `The Oscilloscope <https://www.mccauslandcenter.sc.edu/crnl/oscilloscope>`_ page describes how to display and log time traces from the StimSync.
+ - `StimSync API page <http://www.mccauslandcenter.sc.edu/CRNL/tools/stimsync-api>`_ provides full documentation for advanced users, and details on how to validate the device with your own hardware and software.
+ - `The Oscilloscope <https://www.mccauslandcenter.sc.edu/crnl/oscilloscope>`_ page describes how to display and log time traces from the StimSync.
 
 Many neuroscience experiments rely on presenting stimuli and recording the subsequent responses. For most studies, commodity computers are sufficient for these behavioral experiments – presenting images on a computer screen, presenting sounds with computer speakers and recording responses with a keyboard. However, these devices are not adequate for all studies – for example we may want to present a tactile stimuli or control brain stimulation (e.g. a transcranial magnetic stimulation device). Further, keyboards are not always suitable input devices – for example we may want to use large buttons for individuals with motor impairments or small levers for rodents. While there are many proprietary solutions for this problem they are generally expensive and hard to integrate with a study. Here we describe the open source hardware and software StimSync to solve this problem.
 
@@ -77,20 +77,19 @@ The download includes:
  - Fritzing/Gerber design files and schematics
  - Our keyboard mapper program for assigning which keyboard keys are associated with each input.
  - Sample experiments using EPrime, PsychToolbox, PsychoPy
- -  `oscilloscope programs <http://www.mccauslandcenter.sc.edu/CRNL/tools/oscilloscope>`_ in XCode, Matlab, FreePascal/Lazarus, Processing
+ - `oscilloscope programs <http://www.mccauslandcenter.sc.edu/CRNL/tools/oscilloscope>`_ in XCode, Matlab, FreePascal/Lazarus, Processing
 
 In addition, for advanced users who want to create their own software for the StimSync, we provide an `API <http://www.mccauslandcenter.sc.edu/crnl/stimsync-api>`_ (Application Programming Interface) page</a>that describes how to control the device with software and includes examples in the cross platform Python language.
 
 Simple digital inputs and outputs
 -------------------------------------------
 
-
 .. image:: examples.png
  :width: 50%
  :align: center
 
 
-The image on the right shows a few basic digital circuits. The top row shows digital outputs. The simplest output is the light emitting diode (LED) that illuminates when the output is on: you select a resistor ( `330 ohms will provide about 5 mA for a 3.3v Arduino and 10mA for a 5v Arduino <http://led.linear1.org/1led.wiz>`_ ), connect the anode to the output and the cathode to ground (0v). The “IsoTrigOut” shows a how to make an electrically isolated digital output – this is useful when you want to control a device but do not want any electrical connections between devices. The `AQZ207 <http://www.panasonic-electric-works.com/catalogues/downloads/photomos/ds_x615_en_aqz10_20.pdf>`_ shows how you can operate a solid state relay for controlling larger loads (you will want to use a 2200 ohm resistor for a 3.3v Arduino, and a 3900 ohm resistor for 5v devices). The simplest digital input is momentary switch button – simply connecting the input line to ground will generate a signal. The ‘IsoTrigIn’ shows how to build an optically isolated digital input, where there are no electrical connections between the external device and the Arduino. My `DIY fMRI <http://www.mccauslandcenter.sc.edu/CRNL/tools/diy-fmri>`_ page shows how to convert optical trigger pulses from a MRI scanner into digital inputs using a HFBR2524 and a 555 timer.
+The image on the right shows a few basic digital circuits. The top row shows digital outputs. The simplest output is the light emitting diode (LED) that illuminates when the output is on: you select a resistor (330 ohms will provide about 5 mA for a 3.3v Arduino and 10mA for a 5v Arduino), connect the anode to the output and the cathode to ground (0v). The “IsoTrigOut” shows a how to make an electrically isolated digital output – this is useful when you want to control a device but do not want any electrical connections between devices. The AQZ207 shows how you can operate a solid state relay for controlling larger loads (you will want to use a 2200 ohm resistor for a 3.3v Arduino, and a 3900 ohm resistor for 5v devices). The simplest digital input is momentary switch button – simply connecting the input line to ground will generate a signal. The ‘IsoTrigIn’ shows how to build an optically isolated digital input, where there are no electrical connections between the external device and the Arduino. My `DIY fMRI <http://www.mccauslandcenter.sc.edu/CRNL/tools/diy-fmri>`_ page shows how to convert optical trigger pulses from a MRI scanner into digital inputs using a HFBR2524 and a 555 timer.
 
 Analog inputs
 -------------------------------------------
@@ -98,8 +97,8 @@ Other sections describe how specific analog sensors can be used for a wide range
 
 
  - Any potentiometer can act as a sensor to measure the position of a knob as it is turned. Pulse sensors, triple-axis accelerometer and temperature sensors are all widely available.
- -  `light sensor <https://www.sparkfun.com/products/8688>`_ for observing a computer screen.
- -  `Microphone <https://www.sparkfun.com/products/9964>`_ to act as a voice key. You can also use a standard computer microphone, but you will need to build a pre-amplifier, here is a nice `pre-amplifier schematic <https://www.sparkfun.com/datasheets/BreakoutBoards/Amplified-Mic-Electret-v14.pdf>`_ .
+ - `light sensor <https://www.sparkfun.com/products/8688>`_ for observing a computer screen.
+ - `Microphone <https://www.sparkfun.com/products/9964>`_ to act as a voice key. You can also use a standard computer microphone, but you will need to build a pre-amplifier, here is a nice `pre-amplifier schematic <https://www.sparkfun.com/datasheets/BreakoutBoards/Amplified-Mic-Electret-v14.pdf>`_ .
 
 Application: Transcranial Magnetic Stimulation trigger
 ------------------------------------------------------
@@ -124,7 +123,7 @@ Application: Stop Motion Flash Photography
 
 This circuit and the basic Arduino software can also be used to trigger a camera flash in respone to an optical or auditory signal, creating images reminiscent `HobbyRobotics <http://www.glacialwanderer.com/hobbyrobotics/?p=11>`_ which describes the auditory sensor and laser tripwire methods very well. With my circuit, you can use the `ambient light sensor <https://www.sparkfun.com/products/8688>`_ as an optical tripwire or the `amplified microphone <https://www.sparkfun.com/products/9964>`_ as an auditory trigger. Be warned that some flash hot shoes have a very high voltage, so if you connect directly to the hot shoe make sure your circuit is optically isolated. Alternatively, if your flash has a PC sync connector, you can get PC sync cables online for a few dollars – this connection uses the same voltage as the Arduino/Teensy digital outputs so you only need to connect the ground to the outside shield and the digital output from the Teensy/Arduino to the center pin.
 
-The trick is to set your flash for minimum brightness (and hence minimum duration). For the photo above of the popping balloon we used a `YN 560 <http://speedlights.net/2010/07/14/yongnuo-yn-560-speedlite-review/>`_ flash at 1/128 of full power (~1/8000s illumination). The photograph was made with a Sony NEX 5N, f/8, ISO=3200, 1.6s exposure time (though only illuminated for a fraction of this with the flash). I also set the StimSync to have the slowest possible key refresh rate, so that the flash would only be triggered by the initial sound and not the subsequent echoes.
+The trick is to set your flash for minimum brightness (and hence minimum duration). For the photo above of the popping balloon we used a flash at 1/128 of full power (~1/8000s illumination). The photograph was made with a Sony NEX 5N, f/8, ISO=3200, 1.6s exposure time (though only illuminated for a fraction of this with the flash). I also set the StimSync to have the slowest possible key refresh rate, so that the flash would only be triggered by the initial sound and not the subsequent echoes.
 
 
 .. image:: popping.jpg
@@ -134,8 +133,8 @@ The trick is to set your flash for minimum brightness (and hence minimum duratio
 Alternatives
 -------------------------------------------
 
-If you only want to capture digital inputs, the  `UHID-Nano <http://www.u-hid.com/home/uhid_nano.php>`_  is a terrific device: it simulates a USB keyboard, mouse button, or joystick button. The  `Measurement Computing FS-1208 <http://www.mccdaq.com/usb-data-acquisition/USB-1208FS.aspx>`_  is a USB device that allows digital input/output as well as some analog lines. It is supported by the  `PsychToolbox DAQ <http://docs.psychtoolbox.org/Daq>`_ , making it easy to support. Professional solutions include the `PST serial response box <http://www.pstnet.com/hardware.cfm?ID=102>`_ and the  `Cedrus Voice <http://cedrus.com/sv1/>`_  key.
+If you only want to capture digital inputs, the `UHID-Nano <http://www.u-hid.com/home/uhid_nano.php>`_  is a terrific device: it simulates a USB keyboard, mouse button, or joystick button. The `Measurement Computing FS-1208 <http://www.mccdaq.com/usb-data-acquisition/USB-1208FS.aspx>`_  is a USB device that allows digital input/output as well as some analog lines. It is supported by the `PsychToolbox DAQ <http://docs.psychtoolbox.org/Daq>`_ , making it easy to support. Professional solutions include the `PST serial response box <http://www.pstnet.com/hardware.cfm?ID=102>`_ and the `Cedrus Voice <http://cedrus.com/sv1/>`_  key.
 
-While you may be concerned about small variations in timing, in general these do not matter much in behavioral studies, as described by  `Ulrich and Gray <http://onlinelibrary.wiley.com/doi/10.1111/j.2044-8317.1989.tb01111.x/abstract>`_  ( `PDF here <http://www.psy.gla.ac.uk/~martinl/Assets/MCMPS/Ulrich&amp;Giray89.pdf>`_ ).
+While you may be concerned about small variations in timing, in general these do not matter much in behavioral studies, as described by `Ulrich and Gray <http://onlinelibrary.wiley.com/doi/10.1111/j.2044-8317.1989.tb01111.x/abstract>`_  ( `PDF here <http://www.psy.gla.ac.uk/~martinl/Assets/MCMPS/Ulrich&amp;Giray89.pdf>`_ ).
 
 

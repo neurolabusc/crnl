@@ -33,7 +33,7 @@ General Uses
  -  Both scripts can assist other visual inspections, such as using a yoked-view to inspect how well normalization matched a template or inspecting the motion correction plots to look for abnormal types of head motion. Here are some links for artifacts you should be familiar with:
 
  -  `Overview of artifacts <http://practicalfmri.blogspot.com/2011/11/understanding-fmri-artifacts.html>`_  that are common for EPI fMRI sequences
- -  `Spin history effects <http://imaging.mrc-cbu.cam.ac.uk/imaging/CommonArtefacts#spinhistory>`_  often seen during head motion with interleaved acquisitions.
+ -  `Spin history effects <https://imaging.mrc-cbu.cam.ac.uk/imaging/CommonArtefacts>`_  often seen during head motion with interleaved acquisitions.
  -  `Various common MRI artifacts <http://www.mritutor.org/mritutor/artifact.htm>`_ 
  - MRI reconstruciton errors
  - Poor normalization between individuals: this is often caused by a poor starting estimate. My ` nii_setOrigin12 <https://github.com/neurolabusc/spmScripts>`_  script can help reduce these.

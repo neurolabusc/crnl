@@ -40,10 +40,10 @@ Perfx: A perfusion estimation tool
 
 My Perfx (Perfusion Estimation) software will take a 4D NIfTI format perfusion-weighted DSC images and estimate a few parameters.
 
- -  `Source code <https://github.com/neurolabusc/niiTools>`_  (Windows, Linux, OSX)
- -  `OSX executable <https://github.com/neurolabusc/niiTools/blob/master/compiled/perfx_osx.zip>`_ 
+ - `Source code <https://github.com/neurolabusc/niiTools>`_  (Windows, Linux, OSX)
+ - `OSX executable <https://github.com/neurolabusc/niiTools/blob/master/compiled/perfx_osx.zip>`_ 
 
-If your data is in DICOM format, you will need to convert it to NIfTI (e.g. using  `dcm2niix <https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage>`_ ). The technique is similar to Kim et al, though it uses both an initial linear fit as well as a non-linear fit for the gamma function and does not compute deconvolution. Therefore, this software is well suited for stroke (e.g. robust estimates of the parameters suggested by Christensen et al.) but less suited for tumors (where leakage means the gamma is not a good fit). When you start a perfusion analysis you will want to check a few parameters:
+If your data is in DICOM format, you will need to convert it to NIfTI (e.g. using `dcm2niix <https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage>`_ ). The technique is similar to Kim et al, though it uses both an initial linear fit as well as a non-linear fit for the gamma function and does not compute deconvolution. Therefore, this software is well suited for stroke (e.g. robust estimates of the parameters suggested by Christensen et al.) but less suited for tumors (where leakage means the gamma is not a good fit). When you start a perfusion analysis you will want to check a few parameters:
 
  - Motion correction: if selected images will be realigned to adjust for head motion – individuals often move their heads when they feel the contrast bolus injection begin. This uses MCFLIRT’s mutual information cost function, and therefore requires FSL to be installed (not available for Windows).
  - Brain extraction: This uses FSL’s BET to remove non-brain tissue, leading to a faster computation. Requires FSL to be installed (not available for Windows).
@@ -95,7 +95,7 @@ Links
  - `Jim <http://www.xinapse.com/Manual/perfusion_algorithms.html>`_  is a professional tool that uses deconvolution methods (Ostergaard et al.). This tool has a lot of clever features that provide a lot of utility.
  - `Tero Tuominen <http://www.sal.tkk.fi/publications/pdf-files/etuo04.pdf>`_  wrote an exellent manuscript describing deconvolution analysis.
  - `Wikipedia <http://en.wikipedia.org/wiki/Gamma_distribution>`_  has a great page describing the gamma probability function. This function is related to the gamma fitting used in PWI (however, the Gamma PDF has two parameters and unit area, whereas for PWI we include one parameter that describes delay and a second to describe amplitude).
- - My software attempts to find the best gamma function to fit the observed data by adjusting four values: input time, peak time, peak amplitude and shape. However, like many equations, these parameters interact, making it challenging to find the optimal combination of parameters. This is a great application for  `Powell’s Method <http://people.equars.com/marco/poli/phd/node55.html>`_ , which has many other applications in neuroimaging (e.g. spatial coregistration/normalization; computing optimal hemodynamic response, etc).
+ - My software attempts to find the best gamma function to fit the observed data by adjusting four values: input time, peak time, peak amplitude and shape. However, like many equations, these parameters interact, making it challenging to find the optimal combination of parameters. This is a great application for Powell’s Method, which has many other applications in neuroimaging (e.g. spatial coregistration/normalization; computing optimal hemodynamic response, etc).
 
 References
 -------------------------------------------

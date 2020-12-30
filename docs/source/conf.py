@@ -92,7 +92,10 @@ todo_include_todos = False
 #html_theme = 'alabaster'
 #html_theme = "classic"
 html_theme = 'insegel'
-
+html_theme_options = {
+    'wending_last_updated' : False
+}
+html_theme_path = ['.'] # make sphinx search for themes in current dir
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

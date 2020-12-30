@@ -6,8 +6,8 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = examplecode
 SOURCEDIR     = source
-#BUILDDIR      = build
-BUILDDIR      = /Users/chrisrorden/src/crnl
+BUILDDIR      = build
+#BUILDDIR      = /Users/chrisrorden/src/crnl
 
 # Put it first so that "make" without argument is like "make help".
 help:

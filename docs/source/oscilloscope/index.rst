@@ -161,7 +161,7 @@ Companies like `PulseSensor.com <http://pulsesensor.com/>`_ sells= an elegant he
 Sample Application: Respiration monitoring
 -------------------------------------------
 
- `Braebon <http://www.braebon.com/products/sensors/effort.php>`_ sells Piezo Respiratory Effort Belts that generate small electrical currents as people breath in and out. These can be plugged into a standard electrophsyiological amplifier to provide very clean signals, and work very nicely with the EMG system we designed that I describe above. If you are on a budget, the `AdaFruit Stretch Sensor <http://www.adafruit.com/products/519>`_ can be used with a voltage divider to record a signal directly from the Arduino analog port (without the need for a physiological amplifier). I have tried this solution, and it does work, though at first blush the signal does not look as clean as the professional Braebon solution and I am not sure if there is an inherent temporal lag in the signal.
+ `Braebon <https://www2.braebon.com>`_ sells Piezo Respiratory Effort Belts that generate small electrical currents as people breath in and out. These can be plugged into a standard electrophsyiological amplifier to provide very clean signals, and work very nicely with the EMG system we designed that I describe above. If you are on a budget, the `AdaFruit Stretch Sensor <http://www.adafruit.com/products/519>`_ can be used with a voltage divider to record a signal directly from the Arduino analog port (without the need for a physiological amplifier). I have tried this solution, and it does work, though at first blush the signal does not look as clean as the professional Braebon solution and I am not sure if there is an inherent temporal lag in the signal.
 
 Sample Application: Electrocardiography (EKG)
 ----------------------------------------------
@@ -183,7 +183,7 @@ Links
  -  `Chip Epstein’s EEG <https://sites.google.com/site/chipstein/home-page/eeg-with-an-arduino/recording-eeg-or-ekg-with-an-arduino>`_ system got me interested in this – we are collaborating and eventually will try to integrate all our findings.
  - My Processing code is an extension of `Sofian Audry’s Oscilloscope <http://accrochages.drone.ws/en/node/90>`_ , with changes for sampling rate, precision, number of channels, etc.
  -  `arduinoscope <http://code.google.com/p/arduinoscope/>`_ is another branch of Sofian Audry’s Processing-based oscilloscope.
- -  `lxardoscope <http://lxardoscope.sourceforge.net/>`_ is written in C, and has an elegant user interface. It records data with 8 bit precision. There is a nice `description <http://www.elecfreaks.com/2110.html>`_ for coupling this to a `DDS module <http://www.elecfreaks.com/store/dds-module-ad9850-p-260.html>`_ to generate waveforms and sample them.
+ -  `lxardoscope <http://lxardoscope.sourceforge.net/>`_ is written in C, and has an elegant user interface. It records data with 8 bit precision.
  -  `Girino <http://www.instructables.com/id/Girino-Fast-Arduino-Oscilloscope/>`_ is an oscilloscope that provides high temporal precision samples when a signal exceeds a trigger threshold. This is useful for many applications. The current version records 8 bit precision.
  -  `Arduin-O-Scope <http://arduino.cc/forum/index.php/topic,8077.0.html>`_ is a tiny oscilloscope project.
  -  `xoscillo <http://code.google.com/p/xoscillo/>`_ is a C# (Windows) tool.
