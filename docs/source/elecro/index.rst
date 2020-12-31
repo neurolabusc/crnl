@@ -1,7 +1,9 @@
 ELEcro
 ==========================================
 
-ELEcro is a simple tool for viewing electrophysiological data. We created this tool to analyze data from our `TMSi polygraphy equipment <http://www.tmsi.com/?id=4>`_. ELEcro can read and write data in TMS32 (.S00), EDF (.EDF) and BrainVision Analyzer file formats (.VHDR). The strength and weakness of this software is its simplicity. It is very fast, but only has the features that we routinely need for our study.
+.. _my_elecro:
+
+ELEcro is a simple tool for viewing electrophysiological data. We created this tool to analyze data from our `TMSi polygraphy equipment <https://www.tmsi.com/?id=4>`_. ELEcro can read and write data in TMS32 (.S00), EDF (.EDF) and BrainVision Analyzer file formats (.VHDR). The strength and weakness of this software is its simplicity. It is very fast, but only has the features that we routinely need for our study.
 
 .. image:: elecro.png
    :width: 70%
@@ -25,7 +27,7 @@ Acquiring data
 -------------------------------------------
 
 
- -  You will want to use your polygraph hardware to collect data. ELEcro imports EDF, TMS32 and BrainVision Analyzer format data. If your hardware does not support these formats, you can often translate formats using the  `Biosig toolbox for Matlab/Octave <http://biosig.sourceforge.net>`_ . Alternatively, if you have TMSi hardware, you can try our own  `EMG recorder <http://src4.cas.sc.edu/CRNL/emg-recorder/>`_  to acquire data – this will save data as either TMS32 or BrainVision format.
+ -  You will want to use your polygraph hardware to collect data. ELEcro imports EDF, TMS32 and BrainVision Analyzer format data. If your hardware does not support these formats, you can often translate formats using the `Biosig toolbox for Matlab/Octave <http://biosig.sourceforge.net>`_ . Alternatively, if you have TMSi hardware, you can try our own :ref:`EMG recorder <my_emg_recorder>` to acquire data – this will save data as either TMS32 or BrainVision format.
 
 Analyzing data
 -------------------------------------------
@@ -33,16 +35,16 @@ Analyzing data
 
  -  Modern wireless polygraphic systems allow great mobility, and safety when using other devices (such as transcranial magnetic stimulation). However, it is possible for some of the signals to be dropped, due to radio frequency noise or the computer processing other tasks. For this reason, the TMSi Mobi system generates a ‘Saw’ signal (an additional simulated channel that shows a saw-shaped signal). ELEcro allows you to observe this Saw channel, and future versions will provide a tool to interpolate across these samples.
 
-A common first step for analyzing electrophysiological data is to apply  `temporal filters <http://en.wikipedia.org/wiki/Electronic_filter>`_ . Polygraphic data often has noise from the environment, particularly for mobile units. For example, the alternating current in a buildings wires can cause noise (50-60 Hz depending on your country). The signals also have low frequency drift as the electrode contact changes, as well as high frequency noise. A high-pass filter will remove low-frequencies, whereas a low-pass filter eliminates the high-frequency information. The next paragraphs ELEcro’s temporal filtering options.
+A common first step for analyzing electrophysiological data is to apply `temporal filters <https://en.wikipedia.org/wiki/Electronic_filter>`_ . Polygraphic data often has noise from the environment, particularly for mobile units. For example, the alternating current in a buildings wires can cause noise (50-60 Hz depending on your country). The signals also have low frequency drift as the electrode contact changes, as well as high frequency noise. A high-pass filter will remove low-frequencies, whereas a low-pass filter eliminates the high-frequency information. The next paragraphs ELEcro’s temporal filtering options.
 
 Choose “Low Pass Filter” from the “Tools” menu to apply a Butterworth 4th order low pass filter. You will be asked to specify the frequency limit for you want to use. Note that the filter has considerable roll-off, so if you have sharp 50 Hz noise and want to eliminate this noise and all lower frequencies, try a high pass filter with ~60 Hz (the Tools/GenerateSineWaves command can be applied before a temporal filter to gauge this roll-off). ELEcro will only apply the filter to the physical electrodes, the trigger and saw signals will not be altered. This filter is run in both directions to prevent temporal bias. The pictures on this web page show how the filter can selectively remove frequencies (simulated data).
 
-The Tool’s menu “Filter…” allows you to design one of the filters described by  `Robert Bristow-Johnson <https://webaudio.github.io/Audio-EQ-Cookbook/Audio-EQ-Cookbook.txt>`_ . A window allows your to specify several features of your filter:
+The Tool’s menu “Filter…” allows you to design one of the filters described by `Robert Bristow-Johnson <https://webaudio.github.io/Audio-EQ-Cookbook/Audio-EQ-Cookbook.txt>`_ . A window allows your to specify several features of your filter:
 
- - Type: This specifies the kind of filter to apply. Your options are Low Pass, High Pass, Band Pass CSG, Band Pass CZPG, Notch, All Pass, Peaking, Low Shelf and High Shelf. A  `low pass filter <http://en.wikipedia.org/wiki/Low-pass_filter>`_  attenuates signals above the target frequency, a  `high-pass filter <http://en.wikipedia.org/wiki/High-pass_filter>`_  dampens signals below the target,  `band pass filters <http://en.wikipedia.org/wiki/Band-pass_filter>`_  dampen all frequencies except those near the target, an  `all pass filter <http://en.wikipedia.org/wiki/All-pass_filter>`_  amplifies or dampens all frequencies evenly (though it influences phase), a  peak filter preserves all frequencies but amplifies those near the target frequency, shelf filters  preserve all frequencies, but somewhat increases or decreases frequencies below (low shelf or above (high shelf) the target frequency.
+ - Type: This specifies the kind of filter to apply. Your options are Low Pass, High Pass, Band Pass CSG, Band Pass CZPG, Notch, All Pass, Peaking, Low Shelf and High Shelf. A `low pass filter <https://en.wikipedia.org/wiki/Low-pass_filter>`_  attenuates signals above the target frequency, a `high-pass filter <https://en.wikipedia.org/wiki/High-pass_filter>`_  dampens signals below the target, `band pass filters <https://en.wikipedia.org/wiki/Band-pass_filter>`_  dampen all frequencies except those near the target, an `all pass filter <https://en.wikipedia.org/wiki/All-pass_filter>`_  amplifies or dampens all frequencies evenly (though it influences phase), a  peak filter preserves all frequencies but amplifies those near the target frequency, shelf filters  preserve all frequencies, but somewhat increases or decreases frequencies below (low shelf or above (high shelf) the target frequency.
  - Hz: Specify target frequency. Center Frequency or Corner Frequency, or shelf midpoint frequency, depending on filter type.
  - Gain dB: Used only for peaking and shelving filters. These filters pass all frequencies, but will increase or decrease the intensity of the target frequencies by this amount.
- - Q: By default, this value specifies the  `Quality factor <http://en.wikipedia.org/wiki/Q_factor>`_ , tuning the selectivity of the filter. However, if “Q is bandwidth” is checked, this value sets the bandwidth in octaves.
+ - Q: By default, this value specifies the `Quality factor <https://en.wikipedia.org/wiki/Q_factor>`_ , tuning the selectivity of the filter. However, if “Q is bandwidth” is checked, this value sets the bandwidth in octaves.
  - Q is bandwidth: See above.
  - Filter both forward and reverse: Many filters cause shift signals such that they appear to occur later in time. Running the filters in both directions minimizes this effect.
 
@@ -127,7 +129,7 @@ Downloads
 <TODO> At the bottom of the page you will find attachments for Version 12/2012 and sample datasets:
 
  - ELEcro for Windows
- - ELEcro for OSX (Intel)
+ - ELEcro for macOS (Intel)
  - ELEcro for Linux (Intel 32-bit, GTK2)
  - ELEcro for Linux (Intel 64-bit, GTK2)
  - ELEcro source code (for either Delphi or Lazarus)
@@ -139,13 +141,11 @@ Downloads
 Links
 -------------------------------------------
 
- -  `EDFbrowser <http://www.teuniz.net/edfbrowser/>`_  is an elegant free tool for viewing EDF, EDF+ and BDF format electrophysiological data. It includes many powerful features, and is much more powerful than ELEcro. Further, the current version of ELEcro assumes your EDF data is pretty simple (like generated with TMSi hardware), whereas EDFbrowser can read much more complicated data (for example, with annotation or with channels that have different sampling rates).
- - Some code is based on Michael Vinther’s  `EEG Analyzer <http://logicnet.dk/reports/>`_ . His free software has many powerful features.
- - The Butterworth filter was adapted by  `Jean-Pierre Moreau <http://pagesperso-orange.fr/jean-pierre.moreau/pascal.html>`_ 
- -  `EMG recorder <http://src4.cas.sc.edu/CRNL/emg-recorder/>`_  is a simple tool for collecting EMG data that can subsequently by analyzed with ELEcro.
- - My  `Temporal Filters web page <http://www.mccauslandcenter.sc.edu/CRNL/tools/temporal>`_  is an interactive demonstration of the high pass, low pass and notch filters available in ELEcro.
- - The Twente Medical Systems International `Mobi <http://www.tmsi.com/?id=5>`_ is the EMG system we use. This battery powered unit is able to communicate wirelessly (using bluetooth) or it can simply record data to a standard SD flash memory card.
- -  `Temporal filtering <http://www.univie.ac.at/cga/courses/BE513/EMG/>`_  notes for electrophysiological data.
- - `Systematic study <http://www3.interscience.wiley.com/journal/122581502/abstract?CRETRY=1&amp;SRETRY=0>`_ of the use of low-pass filters for EMG recording.
- - Here are details for the  `European Data Format <http://www.edfplus.info/specs/index.html>`_  (EDF and EDF+).
- - The open source  `EEGLAB <http://sccn.ucsd.edu/eeglab/>`_  matlab scripts are popular for analyzing electrophysiological data.
+ - `EDFbrowser <https://www.teuniz.net/edfbrowser/>`_  is an elegant free tool for viewing EDF, EDF+ and BDF format electrophysiological data. It includes many powerful features, and is much more powerful than ELEcro. Further, the current version of ELEcro assumes your EDF data is pretty simple (like generated with TMSi hardware), whereas EDFbrowser can read much more complicated data (for example, with annotation or with channels that have different sampling rates).
+ - Some code is based on Michael Vinther’s `EEG Analyzer <https://logicnet.dk/reports/>`_ . His free software has many powerful features.
+ - The Butterworth filter was adapted by `Jean-Pierre Moreau <http://jean-pierre.moreau.pagesperso-orange.fr/pascal.html>`_ 
+ - :ref:`EMG recorder <my_emg_recorder>` is a simple tool for collecting EMG data that can subsequently by analyzed with ELEcro.
+ - My :ref:`Temporal Filters web page <my_temporal>`  is an interactive demonstration of the high pass, low pass and notch filters available in ELEcro.
+ - The Twente Medical Systems International `Mobi <https://www.tmsi.com/?id=5>`_ is the EMG system we use. This battery powered unit is able to communicate wirelessly (using bluetooth) or it can simply record data to a standard SD flash memory card.
+ - Here are details for the `European Data Format <https://www.edfplus.info/specs/index.html>`_  (EDF and EDF+).
+ - The open source `EEGLAB <https://sccn.ucsd.edu/eeglab/index.php>`_  matlab scripts are popular for analyzing electrophysiological data.

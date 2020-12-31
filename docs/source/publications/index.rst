@@ -1,6 +1,8 @@
 Publications
 ==================
 
+.. _my_publications:
+
 `Click here for a complete automated listing <https://pubmed.ncbi.nlm.nih.gov/?term=%22Rorden%20C%22%5BAuthor%5D>`_
 
  - Li X, Morgan PS, Ashburner J, Smith J, Rorden C. The first step for neuroimaging data analysis: DICOM to NIfTI conversion. J Neurosci Methods. 264:47-56. PMID: 26945974.

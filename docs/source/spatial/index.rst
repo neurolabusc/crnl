@@ -1,6 +1,7 @@
-
 Spatial Processing
 =======================================
+
+.. _my_spatial:
 
 This page describes demo software to help illustrate a few principles of spatial processing that are important to neuroimaging. You can download the software from the bottom of this page.
 
@@ -52,7 +53,7 @@ During MRI analysis, we often coregister our images – i.e. we will warp differ
 Aliasing
 -------------------------------------------
 
-The transform allows us to change the size of our image, in the sample software this is referred to as the 'Zoom' - where you can make an image larger or smaller. Note that if you make an image smaller, you may see some aliasing. This is illustrated in the images below. The large image on the left is the source image. The second image shows the influence of shrinking the image to half of its original size in each dimension (a Zoom of 0.5 in the X and Y directions). Note that it exhibits strong artifacts: the original image has higher frequencies than can be represented in the smaller image, and these appear as lower frequencies. This is known as aliasing, and is the same reason car wheels can appear to spin backwards on TV, or why helicopter rotor blades can appear motionless in `YouTube videos <https://www.youtube.com/watch?v=R-IVw8OKjvQ>`_. You can experiment with 1D aliasing with the  `Temporal Filtering <http://www.mccauslandcenter.sc.edu/crnl/tools/temporal>`_  demos. The final image shows the image when it is reduced using an  `anti-aliasing filter <https://nbviewer.jupyter.org/urls/dl.dropbox.com/s/s0nw827nc4kcnaa/Aliasing.ipynb>`_ . The  `Matlab web pages <https://blogs.mathworks.com/steve/2017/01/16/aliasing-and-image-resizing-part-3/>`_  include a nice description of aliasing in images, as well as citing the seminal mehtod by Dale Schumacher (1994, 'General Filtered Image Rescaling') that was used to create the anti-aliased image image.
+The transform allows us to change the size of our image, in the sample software this is referred to as the 'Zoom' - where you can make an image larger or smaller. Note that if you make an image smaller, you may see some aliasing. This is illustrated in the images below. The large image on the left is the source image. The second image shows the influence of shrinking the image to half of its original size in each dimension (a Zoom of 0.5 in the X and Y directions). Note that it exhibits strong artifacts: the original image has higher frequencies than can be represented in the smaller image, and these appear as lower frequencies. This is known as aliasing, and is the same reason car wheels can appear to spin backwards on TV, or why helicopter rotor blades can appear motionless in `YouTube videos <https://www.youtube.com/watch?v=R-IVw8OKjvQ>`_. You can experiment with 1D aliasing with the :ref:`Temporal Filtering <my_temporal>` demos. The final image shows the image when it is reduced using an  `anti-aliasing filter <https://nbviewer.jupyter.org/urls/dl.dropbox.com/s/s0nw827nc4kcnaa/Aliasing.ipynb>`_ . The  `Matlab web pages <https://blogs.mathworks.com/steve/2017/01/16/aliasing-and-image-resizing-part-3/>`_  include a nice description of aliasing in images, as well as citing the seminal mehtod by Dale Schumacher (1994, 'General Filtered Image Rescaling') that was used to create the anti-aliased image image.
 
 .. image:: Alias256.png
    :width: 256

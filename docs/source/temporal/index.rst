@@ -1,7 +1,7 @@
-.. _myTemporal:
-
 Temporal Filtering
 ==================
+
+.. _my_temporal:
 
 Temporal filters are often used to remove signal drift in brain imaging (brain scans become brighter or darker gradually during scannning) or external noise in electrophysiological data (e.g. 50-60Hz noise due to electrical signals). Biquad filters are often used as temporal filters, though they can be used in other applications as well (e.g. across space instead of time). Biquad filters allow us to adjust the amplitude of frequencies in a signal, in the same way that we use an audio equalizer to adjust whether we want our music to emphasize or attenuate the bass or treble.
 
@@ -9,7 +9,7 @@ Temporal filters are often used to remove signal drift in brain imaging (brain s
    :width: 70%
    :align: center
   
-This Lazarus/Delphi project demonstrates the biquad filters described by Robert Bristow-Johnson. In addition, the software generates a Fast Fourier Transform (FFT) and shows the signal energy after the filter is applied. This allows you to observe how the filters tend to have roll-off near their target frequency (e.g. a 60 Hz notch filter will also attentuate signals at 50 Hz and 70Hz, though to a lesser extent). The source code includes both graphical and console terminal applications that compile with Delphi, FreePascal or Lazarus, allowing you to create programs for Windows, Linux and OSX.
+This Lazarus/Delphi project demonstrates the biquad filters described by Robert Bristow-Johnson. In addition, the software generates a Fast Fourier Transform (FFT) and shows the signal energy after the filter is applied. This allows you to observe how the filters tend to have roll-off near their target frequency (e.g. a 60 Hz notch filter will also attentuate signals at 50 Hz and 70Hz, though to a lesser extent). The source code includes both graphical and console terminal applications that compile with Delphi, FreePascal or Lazarus, allowing you to create programs for Windows, Linux and macOS.
 
 Usage
 -------------------------------------------

@@ -1,6 +1,8 @@
 MRIcro for macOS
 =======================================
 
+.. _my_mricro:
+
 MRIcro is a small program that runs on Apple macOS for viewing the NIfTI format of medical images popular with scientists. Medical DICOM images can be converted to NIfTI using tools like my free `dcm2nii <https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage>`_ . This software can be used to inspect images from many different modalities including Magnetic Resonance Imaging (MRI), Computerized Axial Tomography (CAT, CT), Positron Emission Tomography (PET), Scanning Electron Microscopes (SEM) and 3D ultrasounds. This can help scientists visualize data or students learn anatomy.
 
 
@@ -10,14 +12,14 @@ MRIcro is a small program that runs on Apple macOS for viewing the NIfTI format 
    
 Requirements, Downloading and Installation
 ---------------------------------------------
-This software is available for Macintosh macOS 10.7 and later with 64-bit Intel CPUs. Users of other operating systems should consider `the more powerful MRIcroGL <http://www.mccauslandcenter.sc.edu/mricrogl/>`_ . Users with older versions of macOS should consider `MRIcron <https://www.nitrc.org/plugins/mwiki/index.php/mricron:MainPage>`_ . The software uses the computers graphics card, so computers with better cards and drivers will be able to view higher resolution images as described in the troubleshooting section.
+This software is available for Macintosh macOS 10.7 and later with 64-bit Intel CPUs. Users of other operating systems should consider `the more powerful MRIcroGL <https://www.mccauslandcenter.sc.edu/mricrogl/>`_ . Users with older versions of macOS should consider `MRIcron <https://www.nitrc.org/plugins/mwiki/index.php/mricron:MainPage>`_ . The software uses the computers graphics card, so computers with better cards and drivers will be able to view higher resolution images as described in the troubleshooting section.
  -  `Click here to get a compiled copy <https://github.com/neurolabusc/MRIcro/releases>`_ 
  -  `Click here to get the source code <https://github.com/neurolabusc/MRIcro>`_ 
 
 Supported Formats
 -------------------------------------------
 
-This software can display the following formats: `NIfTI <http://nifti.nimh.nih.gov/>`_ (.nii, .nii.gz, .hdr/.img),Bio-Rad Pic (.pic), `NRRD <http://teem.sourceforge.net/nrrd/format.html>`_ ,Philips (.par/.rec), `ITK MetaImage <http://www.itk.org/Wiki/ITK/File_Formats>`_ (.mhd, .mha), AFNI(.head/.brik), `Freesurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/MghFormat>`_ (.mgh, .mgz),DICOM (extensions vary)
+This software can display the following formats: `NIfTI <https://nifti.nimh.nih.gov/>`_ (.nii, .nii.gz, .hdr/.img),Bio-Rad Pic (.pic), `NRRD <http://teem.sourceforge.net/nrrd/format.html>`_ ,Philips (.par/.rec), `ITK MetaImage <https://itk.org/Wiki/ITK/File_Formats>`_ (.mhd, .mha), AFNI(.head/.brik), `Freesurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/MghFormat>`_ (.mgh, .mgz),DICOM (extensions vary)
 
 Getting Started
 -------------------------------------------
@@ -51,7 +53,7 @@ MRIcro viewer can load additional images on top of your initial (background) ima
 
 Removing Haze
 -------------------------------------------
-Most raw medical images exhibit a little bit of noise. This can make renderings appear dusty or hazy. The View/RemoveHaze command attempts to eliminate this noise. This is illustrated in Figure 3. You can also use other tools that will attempt to extract the brain from the surrounding scalps – popular alternatives include `AFNI 3dSkullStrip <https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dSkullStrip.html>`_, `FSL Brain Extraction Tool (BET) <http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET>`_,  `MNI Brain Extraction based on nonlocal Segmentation Technique (BEaST) <http://www.bic.mni.mcgill.ca/ServicesSoftwareAdvancedImageProcessingTools/BEaST>`_, and `SPM using the Clinical Toolbox. <https://www.nitrc.org/plugins/mwiki/index.php/clinicaltbx:MainPage>`_ 
+Most raw medical images exhibit a little bit of noise. This can make renderings appear dusty or hazy. The View/RemoveHaze command attempts to eliminate this noise. This is illustrated in Figure 3. You can also use other tools that will attempt to extract the brain from the surrounding scalps – popular alternatives include `AFNI 3dSkullStrip <https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dSkullStrip.html>`_, `FSL Brain Extraction Tool (BET) <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/BET>`_,  `MNI Brain Extraction based on nonlocal Segmentation Technique (BEaST) <https://www.bic.mni.mcgill.ca/ServicesSoftwareAdvancedImageProcessingTools/BEaST>`_, and `SPM using the Clinical Toolbox. <https://www.nitrc.org/plugins/mwiki/index.php/clinicaltbx:MainPage>`_ 
 
 Working with multiple images: Yoking Images
 ---------------------------------------------
@@ -70,15 +72,15 @@ Diffusion Tensor Imaging acquires images that are sensitive to the spontaneous, 
 
 Troubleshooting
 -------------------------------------------
-MRIcro should just work. However, in order to generate fluid graphics it relies on hardware accelerated graphics. If you attempt to load images that are beyond the capability of your graphics card and graphics driver, the images may look scrambled. For example, Figure 6 illustrates that a high-resolution image appears scrambled on my MacBook (using a Sandy Bridge processor with integrated GPU). There are four solutions to this problem. First, you can ensure that your graphics driver is up-to-date: Intel integrated graphics were crippled in versions of macOS between 10.6.6 and 10.8. However, with macOS 10.8 or later (or 10.6.6 and earlier) the Intel Sandy Bridge and Ivy Bridge MacBooks and MacBook Airs should be able to render images up to 256x256x256 voxels (press the round ‘header information’ button in MRIcro’s toolbar to see the resolution of an image). Second, you could use a different computer – computers with a modern dedicated graphics cards should be able to display high resolution scans flawlessly. Third, you could use `MRIcron <https://www.nitrc.org/plugins/mwiki/index.php/mricron:MainPage>`_ instead – MRIcron does not use the graphics card so it runs on any computer (though it is slower and therefore the interface is not as fluid). Finally, you can reslice your data to a lower resolution (for example using one of my `“reslice” scripts <http://www.mccauslandcenter.sc.edu/CRNL/tools/spm8-scripts>`_ . for SPM and Matlab).
+MRIcro should just work. However, in order to generate fluid graphics it relies on hardware accelerated graphics. If you attempt to load images that are beyond the capability of your graphics card and graphics driver, the images may look scrambled. For example, Figure 6 illustrates that a high-resolution image appears scrambled on my MacBook (using a Sandy Bridge processor with integrated GPU). There are four solutions to this problem. First, you can ensure that your graphics driver is up-to-date: Intel integrated graphics were crippled in versions of macOS between 10.6.6 and 10.8. However, with macOS 10.8 or later (or 10.6.6 and earlier) the Intel Sandy Bridge and Ivy Bridge MacBooks and MacBook Airs should be able to render images up to 256x256x256 voxels (press the round ‘header information’ button in MRIcro’s toolbar to see the resolution of an image). Second, you could use a different computer – computers with a modern dedicated graphics cards should be able to display high resolution scans flawlessly. Third, you could use `MRIcron <https://www.nitrc.org/plugins/mwiki/index.php/mricron:MainPage>`_ instead – MRIcron does not use the graphics card so it runs on any computer (though it is slower and therefore the interface is not as fluid). Finally, you can reslice your data to a lower resolution (for example using one of my :ref:`“reslice” scripts <my_spm_scripts>`. for SPM and Matlab).
 
 Alternatives
 -------------------------------------------
 MRIcro only runs on Macintosh macOS. It was designed to be a simple, intuitive tool for displaying medical images. However, just like there are different types of car to suit different drivers, there are different programs that are suited for different applications. Here are some of my favorites.
  -  `FSLeyes <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes>`_ runs on macOS and Linux (and Windows via WSL). It includes great features like a nice DTI fiber tracking view.
- -  `medInria <http://med.inria.fr/>`_ is a very versatile tool, and is my personal favorite for DTI data.
- -  `MRIcroS <http://www.nitrc.org/projects/mricros/>`_ is a surface rendering tool that uses Matlab. It has nice tools for DTI and connectivity mapping.
+ -  `medInria <https://med.inria.fr>`_ is a very versatile tool, and is my personal favorite for DTI data.
+ -  `MRIcroS <https://www.nitrc.org/projects/mricros/>`_ is a surface rendering tool that uses Matlab. It has nice tools for DTI and connectivity mapping.
  -  `itk-SNAP <http://www.itksnap.org/pmwiki/pmwiki.php>`_ is a powerful tool for segmenting brain structures with useful visualization features.
  -  `MRIcroGL <https://www.nitrc.org/plugins/mwiki/index.php/mricrogl:MainPage>`_ : native versions for Windows, macOS and Linux. Scriptable, fast, and flexible. Visually very similar to MRIcro viewer, though less “Mac like” and the flexibility means it is more difficult to master. In our car analogy it is our BMW – lots of performance and features.
  -  `MRIcron <https://www.nitrc.org/plugins/mwiki/index.php/mricron:MainPage>`_ : This has native versions for Windows, macOS and Linux. It does not require a graphics card and so it can run anywhere. In our car analogy, this is like a pickup truck that has tremendous utility (drawing tools, peristimulus plots, etc).
- -  `SPM <http://www.fil.ion.ucl.ac.uk/spm/software/spm8/>`_ is the most popular brain imaging tool, and it includes nice display and rendering functions. It runs on Windows, macOS and Linux but requires a Matlab license (though the open source `Octave <http://en.wikibooks.org/wiki/SPM/Octave>`_ is starting to offer some support).
+ -  `SPM <https://www.fil.ion.ucl.ac.uk/spm/software/spm8/>`_ is the most popular brain imaging tool, and it includes nice display and rendering functions. It runs on Windows, macOS and Linux but requires a Matlab license (though the open source `Octave <https://en.wikibooks.org/wiki/SPM/Octave>`_ is starting to offer some support).

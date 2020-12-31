@@ -1,6 +1,8 @@
 Slice Time Correction (STC)
 =======================================
 
+.. _my_stc:
+
 Modern functional magnetic imaging uses echo (or spiral) planar imaging where a 3D volume is built up from a series of 2D slices. Each slice take some time to acquire, so different slices in a 3D stack were actually observed at different time points. On the other hand, our statistics assumes that the 3D volume was acquired at the same moment in time. Therefore, it is common to slice time correct (STC). This page describes how to compute STC and describes special caveats for Siemens scanners as well as with SPM8’s STC function.
 
 .. image:: slice_order_1.jpg
@@ -67,7 +69,7 @@ Links
  - `Paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3167249/>`_ demonstrating how slice timing can help.
  - The `HCP webpage <https://wiki.humanconnectome.org/display/PublicData/HCP+fMRI+slice-timing+acquisition+parameters>`_ includes the details for users of the popular CMRR sequences.
  - Siemens includes a `white paper <https://www.healthcare.siemens.com/siemens_hwem-hwem_ssxa_websites-context-root/wcm/idc/groups/public/@global/@imaging/@mri/documents/download/mdaz/nzmy/~edisp/mri_60_graessner-01646277.pdf>`_ describing slice order.
- - `Here <http://ani.aalto.fi/en/ami_centre/facilities/miscellaneous/ami_misc_slice_order.pdf>`_ is a nice description of slice order on Siemens.
+ - `Here <https://ani.aalto.fi/en/ami_centre/facilities/miscellaneous/ami_misc_slice_order.pdf>`_ is a nice description of slice order on Siemens.
  - There is a nice `wiki page <https://en.wikibooks.org/w/index.php?title=SPM/Slice_Timing#Slice_Order>`_ on slice order.
 
 

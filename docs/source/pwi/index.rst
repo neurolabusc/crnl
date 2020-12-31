@@ -1,7 +1,7 @@
-.. _myPWI:
-
 Perfusion-weighted imaging (PWI)
 =======================================
+
+.. _my_pwi:
 
 Perfusion-weighted imaging (PWI) allows us to infer how blood traverses the brain’s vasculature. The most popular technique is Dynamic Susceptibility Contrast (DSC) imaging, where we inject a bolus of contrast agent (typically Gadolinium) into the vein of an individuals’ arm. This bolus is sucked into the heart, and then a large portion is pumped into the head, initially travelling through the main arteries, through the capillary beds, and finally exiting from the veins. By take a series of images, we can create a movie illustrating the speed and amount of blood reaching different portions of the brain. Specifically, Gd influences both the T1 and T2 properties of nearby hydrogen, making these regions appear darker. This is very useful for understanding acute stroke (where abnormal perfusion in regions with normal diffusion suggests salvageable tissue) and brain tumors (which exhibit unusual diffusion due to mass effects, modulated metabolism and pathological leakage across the blood-brain barrier). However, there are many different techniques for analyzing perfusion data, each with their own set of implications. This page describes some of the most popular methods, with an emphasis on my own tools. Note you can also measure blood flow using Arterial Spin Labeling (ASL), but that technique is described separately by the Arterial Spin Labeling (ASL) web page.
 
@@ -40,8 +40,7 @@ Perfx: A perfusion estimation tool
 
 My Perfx (Perfusion Estimation) software will take a 4D NIfTI format perfusion-weighted DSC images and estimate a few parameters.
 
- - `Source code <https://github.com/neurolabusc/niiTools>`_  (Windows, Linux, OSX)
- - `OSX executable <https://github.com/neurolabusc/niiTools/blob/master/compiled/perfx_osx.zip>`_ 
+ - `Source code <https://github.com/neurolabusc/niiTools>`_  (Windows, Linux, macOS)
 
 If your data is in DICOM format, you will need to convert it to NIfTI (e.g. using `dcm2niix <https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage>`_ ). The technique is similar to Kim et al, though it uses both an initial linear fit as well as a non-linear fit for the gamma function and does not compute deconvolution. Therefore, this software is well suited for stroke (e.g. robust estimates of the parameters suggested by Christensen et al.) but less suited for tumors (where leakage means the gamma is not a good fit). When you start a perfusion analysis you will want to check a few parameters:
 
@@ -83,18 +82,17 @@ Popular PWI Measures
  - MSR (Maximum signal reduction) measures normalized drop in signal at peak relative to the baseline period prior to arrival of contrast (e.g. a measure of peak height). This appears to correlate with CBF (Klose et al., 1999).
  - MTT (Mean transit time) Similar to gamma first moment, for deconvolution methods this is based on CBV/CBF.
  - TTP (Time-to-peak) time from first appearance of bolus in artery to peak signal change observed in tissue. Surprisingly, this has proved one of the most reliable measures for identifying abnormal tissue (Christensen et al., 2009) and predicting abnormal behavior (Hillis et al., 2001) in acute stroke.
- - Rsquare ( `Coefficient of Determination  <http://en.wikipedia.org/wiki/Coefficient_of_determination>`_ ) describes how well the model describes the observed data, and ranges from 0 to 1, e.g. an Rsquare of 0.75 suggest that the model predicts 75% of the observed variance.
+ - Rsquare ( `Coefficient of Determination  <https://en.wikipedia.org/wiki/Coefficient_of_determination>`_ ) describes how well the model describes the observed data, and ranges from 0 to 1, e.g. an Rsquare of 0.75 suggest that the model predicts 75% of the observed variance.
 
 Links
 -------------------------------------------
 
- - `DSCoMAN <https://dblab.duhs.duke.edu/modules/dscoman/index.php?id=1>`_ is a free tool for raw or Boxerman et al. corrected linear-fitted perfusion parameters. This software works as a plugin to the free ImageJ program.
+ - `DSCoMAN <https://sites.duke.edu/dblab/dscoman/>`_ is a free tool for raw or Boxerman et al. corrected linear-fitted perfusion parameters. This software works as a plugin to the free ImageJ program.
  - `Perfusion Mismatch Analyzer (PMA) <http://asist.umin.jp/index-e.htm>`_ is a free tool from Japan’s Acute Stroke Imaging Standardization Group.
- - `PerfScape <http://www.ntntrading.co.th/2011/index.php/en/perfscape.html>`_  is a professional tool that uses the deconvolution method (Ostergaard et al.).
+ - `PerfScape <https://www.ntntrading.co.th/2011/index.php/en/perfscape.html>`_  is a professional tool that uses the deconvolution method (Ostergaard et al.).
  - `StrokeTool <http://www.digitalimagesolutions.de/>`_  is a professional tool that uses the deconvolution method (Ostergaard et al.).
  - `Jim <http://www.xinapse.com/Manual/perfusion_algorithms.html>`_  is a professional tool that uses deconvolution methods (Ostergaard et al.). This tool has a lot of clever features that provide a lot of utility.
- - `Tero Tuominen <http://www.sal.tkk.fi/publications/pdf-files/etuo04.pdf>`_  wrote an exellent manuscript describing deconvolution analysis.
- - `Wikipedia <http://en.wikipedia.org/wiki/Gamma_distribution>`_  has a great page describing the gamma probability function. This function is related to the gamma fitting used in PWI (however, the Gamma PDF has two parameters and unit area, whereas for PWI we include one parameter that describes delay and a second to describe amplitude).
+ - `Wikipedia <https://en.wikipedia.org/wiki/Gamma_distribution>`_  has a great page describing the gamma probability function. This function is related to the gamma fitting used in PWI (however, the Gamma PDF has two parameters and unit area, whereas for PWI we include one parameter that describes delay and a second to describe amplitude).
  - My software attempts to find the best gamma function to fit the observed data by adjusting four values: input time, peak time, peak amplitude and shape. However, like many equations, these parameters interact, making it challenging to find the optimal combination of parameters. This is a great application for Powell’s Method, which has many other applications in neuroimaging (e.g. spatial coregistration/normalization; computing optimal hemodynamic response, etc).
 
 References

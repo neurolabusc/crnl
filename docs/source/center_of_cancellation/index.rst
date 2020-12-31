@@ -1,6 +1,7 @@
-
 Center of Cancellation
 =======================================
+
+.. _my_center_of_cancellation:
 
 Cancellation tasks are popular tools for diagnosing spatial neglect. Classically, an individual is shown a piece of paper with a clutter of items, and asked to mark each occurrence of a target item. Individuals with spatial neglect often miss items on the contralesional side of the page. For example, when asked to find all occurrences of the letter ‘A’, an individual who has suffered right hemisphere injury may tend to miss items on the left side of the test. This tool was popularized by Albert (1973), though he noted previous similar tasks.
 
@@ -21,8 +22,8 @@ Free software for calculating the cancellation score
 
 The first step is to download and unzip our software
 
- - Compiled versions for Windows and Macintosh OSX are available here `https://github.com/neurolabusc/Cancel/tree/master/Compiled <https://github.com/neurolabusc/Cancel/tree/master/Compiled>`_
- - The source code is available which can be used to compile the software for OSX, Windows and Linux from `https://github.com/neurolabusc/Cancel <https://github.com/neurolabusc/Cancel>`_
+ - Compiled versions for Windows and Macintosh macOS are available here `https://github.com/neurolabusc/Cancel/tree/master/Compiled <https://github.com/neurolabusc/Cancel/tree/master/Compiled>`_
+ - The source code is available which can be used to compile the software for macOS, Windows and Linux from `https://github.com/neurolabusc/Cancel <https://github.com/neurolabusc/Cancel>`_
 
 This software comes with two cancellation tests: the Bell’s test (Gauthier et al., 1989) and the Letter task (Weintraub and Mesulam, 1985). In the Bell’s task the goal is to detect all 50 bells scattered among distracting items. In the letter task the goal is to detect all 60 occurrences of the letter ‘A’ hidden among other letters. To administer the tests, print the included JPEG image and ask the participant to mark as many items as possible with a pen. To score the test, launch our software and choose File/Open and select the test you wish to analyze (e.g. the file letter_test.ini). If the person detected most of the items, choose Edit/CheckAll – all the targets turn green, now click on the items the individual missed (making them appear DARK). If the person missed the majority of the targets, choose Edit/UncheckAll – all the targets appear BRIGHT, now click the items the person detected making them turn DARK. As you select and unselect items you will see the center of cancellation score displayed on the program’s titlebar. Once you have completed scoring a patient, choose File/Save to save your dataset.
 
@@ -56,13 +57,13 @@ If you use our tool, we would be grateful if you would consider citing Rorden an
 Relevant articles
 -------------------------------------------
 
- - Albert ML `(1973) <http://www.ncbi.nlm.nih.gov/pubmed/4736313>`_ A simple test of visual neglect. Neurology. 23:658-64.
- - Binder J, Marshall R, Lazar R, Benjamin J, Mohr JP `(1992) <http://www.ncbi.nlm.nih.gov/pubmed/1444886>`_ Distinct syndromes of hemineglect. Arch Neurol. 49:1187-94.
- - Ferber S, Karnath H-O `(2001a) <http://www.ncbi.nlm.nih.gov/pubmed/11778637>`_ How to assess spatial neglect-line bisection or cancellation tasks?. J Clin Exp Neuropsychol. 23:599-607.
+ - Albert ML `(1973) <https://pubmed.ncbi.nlm.nih.gov/4736313>`_ A simple test of visual neglect. Neurology. 23:658-64.
+ - Binder J, Marshall R, Lazar R, Benjamin J, Mohr JP `(1992) <https://pubmed.ncbi.nlm.nih.gov/1444886>`_ Distinct syndromes of hemineglect. Arch Neurol. 49:1187-94.
+ - Ferber S, Karnath H-O `(2001a) <https://pubmed.ncbi.nlm.nih.gov/11778637>`_ How to assess spatial neglect-line bisection or cancellation tasks?. J Clin Exp Neuropsychol. 23:599-607.
  - Gauthier L, Dehaut F, Joanette Y (1989). The bells test: A quantitative and qualitative test for visual neglect. International Journal of Clinical Neuropsychology, 11, 49-54.
- - Marsh EB, Hillis AE. `(2008) <http://www.ncbi.nlm.nih.gov/pubmed/18761135>`_ Dissociation between egocentric and allocentric visuospatial and tactile neglect in acute stroke. Cortex. 44(9):1215-20.
- - Ota H, Fujii T, Suzuki K, Fukatsu R, Yamadori A. `(2001) <http://www.ncbi.nlm.nih.gov/pubmed/11739827>`_ Dissociation of body-centered and stimulus-centered representations in unilateral neglect. Neurology. 57(11):2064-9.
+ - Marsh EB, Hillis AE. `(2008) <https://pubmed.ncbi.nlm.nih.gov/18761135>`_ Dissociation between egocentric and allocentric visuospatial and tactile neglect in acute stroke. Cortex. 44(9):1215-20.
+ - Ota H, Fujii T, Suzuki K, Fukatsu R, Yamadori A. `(2001) <https://pubmed.ncbi.nlm.nih.gov/11739827>`_ Dissociation of body-centered and stimulus-centered representations in unilateral neglect. Neurology. 57(11):2064-9.
  - Pouget, A., Deneve, S. Sejnowski, T.J. (1999) Frames of reference in hemineglect: a computational approach. Progress in Brain Research 121:81-97. Jim Reggia, Eytan Ruppin and Dennis Glanzman (eds). “Neural modeling of brain disorders”. Elsevier.
- - Rorden C, Karnath HO. `(2010) <http://www.ncbi.nlm.nih.gov/pubmed/20433859>`_ A simple measure of neglect severity. Neuropsychologia. 48(9):2758-63.
- - Rorden C, Hjaltason H, Fillmore P, Fridriksson J, Kjartansson O, Magnusdottir S, Karnath HO. `(2012) <http://www.ncbi.nlm.nih.gov/pubmed/22608082>`_ Allocentric neglect strongly associated with egocentric neglect. Neuropsychologia. 50(6):1151-7.
+ - Rorden C, Karnath HO. `(2010) <https://pubmed.ncbi.nlm.nih.gov/20433859>`_ A simple measure of neglect severity. Neuropsychologia. 48(9):2758-63.
+ - Rorden C, Hjaltason H, Fillmore P, Fridriksson J, Kjartansson O, Magnusdottir S, Karnath HO. `(2012) <https://pubmed.ncbi.nlm.nih.gov/22608082>`_ Allocentric neglect strongly associated with egocentric neglect. Neuropsychologia. 50(6):1151-7.
  - Weintraub S, &amp; Mesulam, MM (1985). Mental state assessment of young and elderly adults in behavioral neurology. In M.M. Mesulam (Ed.), Principles of behavioral neurology (pp. 71-123). Philadelphia: Davis Company.

@@ -1,6 +1,8 @@
 Sensation and Perception (PSYC450)
 ==========================================
 
+.. _my_psyc450:
+
 .. image:: south-carolina.jpg
  :width: 100%
  :align: center
@@ -27,7 +29,6 @@ Details
 	- Foley and Matlin (2009) Sensation and Perception. ISBN-10: 0205579809
 
 - Description: How does the brain weave information from the five senses into the rich tapestry of our experience? Lets find out! Illusions will reveal the brain can be a con artist. Experiments will reveal the physics that shapes human perception. By using the latest technology we will demonstrate how the senses are seamlessly integrated. Lets explore how the brain works with hands-on examples.
-
 
 Students in this course will learn how humans use the sensory systems of sight, taste, touch, smell, and hearing to perceive and interpret their environment. We will draw upon information from a variety of fields, including art, biology, physics, and psychology to address these issues. In addition to covering the material in the text, we will discuss current issues in perceptual research. The course is heavily weighted in topics related to visual and auditory perception. This course may be taken to fulfill a major requirement in Psychology, or a minor requirement in Neuroscience. Students from all disciplines are welcome in this course. Lectures are designed to provide an important foundation of information and to improve your ability to process and synthesize facts and concepts. Because exams will be primarily based on content covered in lecture, lecture attendance is crucial to your success in this course
 
@@ -227,7 +228,7 @@ Demonstrations
 	- Thresholds: Detecting quiet sounds shows a ROC curve. We can change the volume to influence discriminability. We can use rewards or punishment to influence criterion. (ROCui Matlab script) 
 	- Frequencies: We can take a sharp (focused) and blurry (unfocused) image of the same scene to show low frequencies. We can compute the difference between these two images to reveal the high frequencies (edges). We can add the edges to the sharp image to enhance edges (sharpening). [bmp_unsharpmask Matlab script]. 
 	- We can measure neural conduction time by using transcranial magnetic stimulation [TMS] to cause a finger movement. We can then measure the motor evoke potential to see the transmission delay time from the brain to the finger. 
-	- Fourier Processing see :ref:`myTemporal`
+	- Fourier Processing see :ref:`temporal processing page <my_temporal>`
 	- David Heeger's Signal Detection `Matlab tutorial <http://www.cns.nyu.edu/~david/courses/perceptionGrad/syllabus2013.html>`_
 - Chapter 2: Light to neural signals 
 	- Focal length and aperture: We can make pin hole cameras with different focal lengths (camera body caps with holes drilled in the center, lens adapters provide different focal length). We can adjust the aperture of a lens to reveal different depth of field and light transmission. 
@@ -248,7 +249,7 @@ Demonstrations
 - Chapter 6: Space perception, binocular vision 
 	- Binocular rivalry 
 	- `Akiyoshi Kitaoki’s Rollers Illusion <http://www.ritsumei.ac.jp/~akitaoka/index-e.html>`_ 
-	- `Kinetic depth perception <http://michaelbach.de/ot/index.html>`_ 
+	- `Kinetic depth perception <https://michaelbach.de/ot/index.html>`_ 
 - Chapter 7: Attention and scene perception 
 	- Visual search: feature vs conjunction 
 	- Neglect: egocentric vs allocentric 
@@ -268,7 +269,7 @@ Demonstrations
 	- Interaural time and loudness practical demonstrating (requires Matlab) 
 - Chapter 11: Music and speech perception 
 	- `The Auditory Neuroscience has terrific demos for all the hearing chapters. <http://auditoryneuroscience.com>`_ 
-	- `McGurk effect <http://www.youtube.com/watch?v=G-lN8vWm3m0>`_ 
+	- `McGurk effect <https://www.youtube.com/watch?v=G-lN8vWm3m0>`_ 
 	- `Try the Octave illusion <http://deutsch.ucsd.edu/psychology/pages.php?i=202>`_ 
 - Chapter 12: Spatial orientation and the vestibular system 
 	- Wagging your finger versus wagging your head (see book chapter) 
@@ -279,10 +280,10 @@ Demonstrations
 	- Rubber hand illusion 
 - Chapter 14: Olfaction 
 	- Le Nez du Vin includes 54 smells often identified in wines. Can you identify these smells without any other context? 
-	- `Human_pheromones <http://www.ted.com/talks/tristram_wyatt_the_smelly_mystery_of_the_human_pheromone>`_ 
+	- `Human_pheromones <https://www.ted.com/talks/tristram_wyatt_the_smelly_mystery_of_the_human_pheromone>`_ 
 - Chapter 15: Taste 
 	- `Miraculin: makes acid taste sweet <https://en.wikipedia.org/wiki/Miraculin>`_ 
-	- `Gymnema Sylvestre tea can (temporarily) abolish your sense of sweet taste. <https://www.amazon.com/Gymnema-green-Tea-diabetics-caffeine/dp/B003JVVFQ0>`_ 
+	- Gymnema Sylvestre tea can (temporarily) abolish your sense of sweet taste.
 	- `Are you a super taster? Can you taste PROP? <https://en.wikipedia.org/wiki/Propylthiouracil>`_ 
 	- `Foley and Matlin describe some elegant taste and smell demonstrations <http://www.skidmore.edu/~hfoley/Perc13.htm>`_ 
 

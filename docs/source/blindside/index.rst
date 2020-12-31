@@ -1,12 +1,14 @@
 Blindside 
 =======================================
 
+.. _my_blindside:
+
 Blindside is software and hardware that controls the administration of tDCS. It allows experimenters to run double blind studies.
 Transcranial direct current stimulation (tDCS) is a technique for modulating brain activity. In this technique, a very small current (~1 mA) is passed between two electrodes (typically, sponges soaked in saline), with at least one placed on the scalp near the cortex. It is believed that tDCS facilitates neural activity under an anodal electrode and inhibits activation under a cathodal electrode. tDCS has many potential benefits. It is very inexpensive, safe (Nitsche 2003a, 2009) and easy to use. In addition, the effects of tDCS appear to be sustained – for example Nitsche et al. (2003b) note that a ten-minute stimulation can influence behavior for a couple hours. This has clear clinical potential (Baker, 2010).
 
 
 .. image:: blindside-300x206.jpg
-   :width: 70%
+   :width: 300
    :align: center
 
 Despite these attractive features, the effect sizes observed with current tDCS paradigms are very small. A major concern is that experimenter demand can drive small effects (e.g. the Clever Hans effect, where a horse appeared to be able to count by watching the movements of his trainer). This means that the experimenter might be accidentally influencing the data. Therefore, it is very important to ensure that tDCS studies use careful double-blind controls. In other words, neither the experimenter nor the participant should be aware of the stimulation provided.
