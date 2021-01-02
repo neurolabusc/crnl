@@ -4,7 +4,7 @@ Chris Rorden's Neuropsychology Lab
 =======================================
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: Contents:
 
    about/index.rst
