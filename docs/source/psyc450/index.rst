@@ -228,7 +228,7 @@ Demonstrations
 	- Thresholds: Detecting quiet sounds shows a ROC curve. We can change the volume to influence discriminability. We can use rewards or punishment to influence criterion. (ROCui Matlab script) 
 	- Frequencies: We can take a sharp (focused) and blurry (unfocused) image of the same scene to show low frequencies. We can compute the difference between these two images to reveal the high frequencies (edges). We can add the edges to the sharp image to enhance edges (sharpening). [bmp_unsharpmask Matlab script]. 
 	- We can measure neural conduction time by using transcranial magnetic stimulation [TMS] to cause a finger movement. We can then measure the motor evoke potential to see the transmission delay time from the brain to the finger. 
-	- Fourier Processing see :ref:`temporal processing page <my_temporal>`
+	- `Fourier Transform to visualize the impact of filters <https://github.com/neurolabusc/biquad-filter>`_
 	- David Heeger's Signal Detection `Matlab tutorial <http://www.cns.nyu.edu/~david/courses/perceptionGrad/syllabus2013.html>`_
 - Chapter 2: Light to neural signals 
 	- Focal length and aperture: We can make pin hole cameras with different focal lengths (camera body caps with holes drilled in the center, lens adapters provide different focal length). We can adjust the aperture of a lens to reveal different depth of field and light transmission. 

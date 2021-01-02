@@ -36,17 +36,17 @@ Lectures
 - MRI physics: Image Contrast.
 
 	- The `virtual MR <https://sourceforge.net/projects/vmri/files/Virtual%20MR%20scanner/Virtual%20MR%20Scanner%203.2.14/>`_  and `mrilabI <https://sourceforge.net/projects/mrilab/>`_ programs allow you to interactively adjust MRI parameters and see the results.
-	- :ref:`Graphs (and Matlab scripts) <my_mri_concepts>` for basic MRI contrast effects.
+	- Graphs (and Matlab scripts) <https://github.com/neurolabusc/mri-contrast>`_ for basic MRI contrast effects.
 
 - fMRI Paradigm Design.
 
-	-  My :ref:`fMRI simulator <my_fmri_simulator>` allows you to explore the hemodynamic changes induced by different tasks. 
+	-  My `fMRI simulator <https://github.com/neurolabusc/fMRI-Simulator>`_ allows you to explore the hemodynamic changes induced by different tasks. 
 
 - Statistics and Thresholding.
 
 - Spatial Processing I: Spatial Registration – realignment (motion correction), coregistration, normalization; Spatial interpolation – linear, spline, sinc functions
 
-	- :ref:`Spatial Processing Demos <my_spatial>`. 
+	- `Spatial Processing Demos <https://github.com/neurolabusc/spatial-processing>`_. 
 
 - Spatial Processing Continued II: Smoothing – filters, edge detection, gaussian blur, homogeneity correction (for EPI and anatomical scans), motion related intensity changes.
 
@@ -54,8 +54,8 @@ Lectures
 
 - Temporal Processing
 
-	- :ref:`Interactive filtering demo <my_temporal>` shows how low-pass, high-pass and notch filters modulate a signal.
-	- :ref:`Physiological Artifact Removal Tool <my_part>`. 
+	- `Interactive filtering demo <https://github.com/neurolabusc/biquad-filter>`_ shows how low-pass, high-pass and notch filters modulate a signal.
+	- `Physiological Artifact Removal Tool <https://github.com/neurolabusc/Part>`_ . 
 
 - FSL and SPM. Hands on demonstrations
 
@@ -80,14 +80,10 @@ Lectures
  
 - Student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
 
-
-
 Assessment and Assignments
 -------------------------------------------
 
 The final grade is weighted 30% quizzes, 40% on homework assignments and 30% on the essay. Letter grades assigned as follows A = 90-100%, B = 80-90%, C = 70-80%, D = 60-70%, F = <60%. Graduate students (PSYC888) must also present a research article as a class presentation 45 minute. This presentation is scored as pass or fail that modifies the grade on the essay by x1.0 (pass) or x0.5 (fail), so that a perfect essay (100%) with a failed presentation (x0.5) yields a weighted score of 50%. Material from this article will be included in the quiz, so underdraduates will want to pay careful attention to this presentation. Homework description: Students will submit regular homework assignments, which are due at noon on their due date. Assignments are due in the students' dropbox folder unless otherwise specified. Essay description: Students will write an essay that describes the merits, limitations and potential of a current or potential technique used to infer brain function. Essays should extend beyond the information in the course. Examples include: ERP vs fMRI, MEG, functional connectivity, Independent Component Analysis, Adaptation Designs.
-
-
 
 Learning Outcomes
 -------------------------------------------
@@ -103,23 +99,17 @@ Attendance
 
 Attendance throughout class is required. By registering for this class you are confirming your availability during class. If you must miss a class, you should talk to the instructor ahead of time. For emergencies (flu, car trouble) it is strongly preferred that you send a text message to the instructor at the time of the class. Failure to meet the 10% rule described in the academic regulations will have homework assignment scores diminished by the proportion of the absences across the term (e.g. missing 15% of classes will mean your final score reflects 85% of your homework score).
 
-
-
 Plagiarism
 -------------------------------------------
 
 University policy regarding plagiarism, cheating and other forms of academic dishonesty is followed explicitly [See Carolina Community: Student Handbook and Policy Guide, Academic Responsibility]. Any case will be reported to the Dean of the College of Arts and Sciences. A “0” score will be given on a plagiarized assignment, and may result in an “F” for the course in extreme cases.
-
-
 
 Disabilities
 -------------------------------------------
 
 Students who have disabilities must have certification from the Office of Disability Services and must make clear during the first week of class what accommodations they expect. Students with disabilities must complete the same exams and assignments as other students in order to get course credit.
 
-
-
-Relevant Links:
+Links
 -------------------------------------------
 
  - `SPM statistics <https://www.mrc-cbu.cam.ac.uk/Imaging/Common/tutorials.shtml>`_ 

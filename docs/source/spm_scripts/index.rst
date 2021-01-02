@@ -28,6 +28,5 @@ Toolboxes
 My own scripts
 -------------------------------------------
 
-
  - I now host my spmScripts on `GitHub <https://github.com/rordenlab/spmScripts>`_.
 
