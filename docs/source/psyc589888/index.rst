@@ -14,7 +14,7 @@ Details:
  - Course Code: (Undergrad) PSYC 589(Grad) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
  - When: Spring 20211:15-2:30 T/Th, Jan 12-Apr 22
  - Where:Hamilton 238 and Virtual Instruction
- - `Syllabus :download:`pdf <syl.pdf>`
+ - `Syllabus :download:`pdf <syl.pdf>`_
  - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1olEutlOWRjtkofv8uiaM0bJ-ImJ104IHvnphcyySVNk/edit>`_
  - License: `the slides and material for this course are distributed under the Creative Commons license <https://creativecommons.org/licenses/by/3.0/>`_ . Further details are in the notes section of the PowerPoint file.
  - Textbook: `Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy <https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/>`_ .
@@ -35,8 +35,8 @@ Lectures
 
 - MRI physics: Image Contrast.
 
-	- The `virtual MR <https://sourceforge.net/projects/vmri/files/Virtual%20MR%20scanner/Virtual%20MR%20Scanner%203.2.14/>`_  and `mrilabI <https://sourceforge.net/projects/mrilab/>`_ programs allow you to interactively adjust MRI parameters and see the results.
-	- Graphs (and Matlab scripts) <https://github.com/neurolabusc/mri-contrast>`_ for basic MRI contrast effects.
+	- The `virtual MR <https://sourceforge.net/projects/vmri/files/Virtual%20MR%20scanner/Virtual%20MR%20Scanner%203.2.14/>`_  and `mrilab <https://sourceforge.net/projects/mrilab/>`_ programs allow you to interactively adjust MRI parameters and see the results.
+	- `Graphs (and Matlab scripts) <https://github.com/neurolabusc/mri-contrast>`_ for basic MRI contrast effects.
 
 - fMRI Paradigm Design.
 
@@ -80,6 +80,12 @@ Lectures
  
 - Student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
 
+Practicals
+-------------------------------------------
+
+Practicals will use Amazon Web Services. You will need to install the `Client Application <https://clients.amazonworkspaces.com/>`_. You will receive a user name and password for this system. The material extends the `FSL Training Course <https://fsl.fmrib.ox.ac.uk/fslcourse/>`_ .
+
+
 Assessment and Assignments
 -------------------------------------------
 
@@ -119,3 +125,38 @@ Links
  - `SPM course <https://www.fil.ion.ucl.ac.uk/spm/course/>`_ , and the `SPM8 manual <https://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf>`_ 
  - `NeuroDebian <https://neuro.debian.net/vm.html>`_ virtual machine is a great way for students to try out neuroimaging tools.
  - `Lin4Neuro <https://www.nemotos.net/lin4neuro/>`_ is an open source Linux distribution that comes with many of the most popular free MRI tools (FSL, MRIcron, etc) already installed.
+
+Calendar
+-------------------------------------------
+
+This course follows the `Spring 2021 academic calendar <https://sc.edu/about/offices_and_divisions/registrar/academic_calendars/2020-21_calendar.php>`_ . Classes being
+
+ - Tu 12 Jan
+ - Th 14 Jan
+ - Tu 19 Jan
+ - Th 21 Jan
+ - Tu 26 Jan
+ - Th 28 Jan
+ - Tu 2 Feb
+ - Th 4 Feb
+ - Tu 9 Feb
+ - Th 11 Feb
+ - Tu 16 Feb
+ - Th 18 Feb
+ - Tu 23 Feb
+ - Th 25 Feb (Wellness Holiday)
+ - Tu 2 Mar
+ - Th 4 Mar
+ - Tu 16 Mar
+ - Th 18 Mar
+ - Tu 23 Mar
+ - Th 25 Mar
+ - Tu 30 Mar (Wellness Holiday)
+ - Th 1 Apr
+ - Tu 6 Apr
+ - Th 8 Apr
+ - Tu 13 Apr
+ - Th 15 Apr
+ - Tu 20 Apr
+ - Th 22 Apr
+ 

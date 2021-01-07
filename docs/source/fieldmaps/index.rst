@@ -58,7 +58,7 @@ Tips
 
 
 
-Note that tools like FUGUE expect you to provide the magnitude and phase images. If you are setting up your acquisition, you should request these images on the scanner console. However, if you are dealing with archival data, you should be able to recognize and convert different forms of images. For example, consider the  `ADNI <https://adni.loni.usc.edu/data-samples/data-types/mri/>`_  participant 130_S_4405 who was scanned in 2012 and again in 2017. The 2012 sequence only saved the image as imaginary (image below, 1st column) and real (2nd column) components of the complex image. In this case, you can use the FSL tool<span class="s1">fslcomplex to create the magnitude (3rd column) and phase image (right column).</span>
+Note that tools like FUGUE expect you to provide the magnitude and phase images. If you are setting up your acquisition, you should request these images on the scanner console. However, if you are dealing with archival data, you should be able to recognize and convert different forms of images. For example, consider the  `ADNI <https://adni.loni.usc.edu/data-samples/data-types/mri/>`_  participant 130_S_4405 who was scanned in 2012 and again in 2017. The 2012 sequence only saved the image as imaginary (image below, 1st column) and real (2nd column) components of the complex image. In this case, you can use the FSL tool `fslcomplex <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Fslutils>`_ to create the magnitude (3rd column) and phase image (right column).
 
 .. image:: imag_real_mag_phase.png
    :width: 70%

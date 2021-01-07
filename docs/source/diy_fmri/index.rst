@@ -28,8 +28,8 @@ Visual stimuli
 Computer screens are the typical way for presenting fMRI tasks. This allows you to present experiments written in EPrime, Presentation, Cogent, or your favorite programming language. There are basically four options here:
 
 
- - The least expensive solution is to place a computer projector at the foot of the MRI scanner. With this method, you shine through the console window (shown in<span style="color: blue;">blue</span>in the diagram). Since the projector is outside the faraday cage, you can use an ordinary projector. There are two small disadvantages to this method. First, typical console glass includes a metal mesh to block radio signals, and this degrades the image a bit. The other problem is that this limits your view of the participant from the console – so it is harder to see if the participant is squirming or otherwise uncomfortable.
- - You could put a computer projector beyond the head of the participant. Typically, the projector is located outside the scanner and shines through a wave guide (shown in<span style="color: red;">red</span>in the diagram). This does require a very large wave guide and a projector with a long-throw lens. An alternative of this method is to get a MRI compatible projector that is placed inside the magnet hall (so a large wave guide is not required), for example professional solutions by `Avotec <https://www.avotecinc.com>`_ and <`PST <https://pstnet.com>`_ .
+ - The least expensive solution is to place a computer projector at the foot of the MRI scanner. With this method, you shine through the console window (shown in blue in the diagram). Since the projector is outside the faraday cage, you can use an ordinary projector. There are two small disadvantages to this method. First, typical console glass includes a metal mesh to block radio signals, and this degrades the image a bit. The other problem is that this limits your view of the participant from the console – so it is harder to see if the participant is squirming or otherwise uncomfortable.
+ - You could put a computer projector beyond the head of the participant. Typically, the projector is located outside the scanner and shines through a wave guide (shown in red in the diagram). This does require a very large wave guide and a projector with a long-throw lens. An alternative of this method is to get a MRI compatible projector that is placed inside the magnet hall (so a large wave guide is not required), for example professional solutions by `Avotec <https://www.avotecinc.com>`_ and <`PST <https://pstnet.com>`_ .
  - `Nordic NeuroLab <https://nordicneurolab.com>`_ and `Cambridge Research Systems <https://www.crsltd.com>`_ sell MRI compatible LCD monitors that could be placed at the head or foot of the participant.
  - You could purchase an MRI compatible LCD display in the form of `goggles <http://www.mrivideo.com/visuastimdigital.php>`_ or a `panel <https://www.avotecinc.com>`_ that mounts directly to the headcoil. This does require extra cables running into the scanner, and many of the solutions have limited resolution.
 
@@ -38,8 +38,6 @@ Computer screens are the typical way for presenting fMRI tasks. This allows you 
   :align: center
 
 The first three methods require a mirror mounted on the head coil. Your scanner manufacturer should provide you with one of these (seen on the headcoil in the picture on the right). The first two methods require a back projection screen. The image on the right shows the professional screen we use. However, a low budget version can be made using plastic (PVC) pipe from you local plumbing store and a large sheet of drafting mylar.
-
-
 
 Auditory stimuli
 -------------------------------------------
@@ -73,15 +71,12 @@ Recording physiological data
  - It is often useful to collect physiological measures for features such as heart rate or respiration. These data are often used as nuisance regressors (since `physiological noise can interfere with our ability to detect cognitive responses <https://github.com/neurolabusc/Part>`_ ). Alternatively, these may be our prime measures of interest (e.g. heart rate variability may reveal something about the emotional state of the participant).
  - Many scanner manufacturers provide devices for measuring pulse and heart rate. For example, Siemens provides wireless (bluetooth) heart rate (shown in photos on the right) and respiration sensors that record at ~50Hz. Philips includes heart rate and respiration with recording of ~400Hz (though their data logging makes these files much harder to synchronizing with scanner acquisition). However, it should be noted that the scanner manufacturers are developing these tools primarily for data acquisition (e.g. triggering the MRI at a specific phase in the cardiac or respiration cycle), and therefore these devices may not be ideal for all situations (for example measuring blood oxygenation, SpO2). Other devices do exist that can help in these situations. For example, `Mark Wall <https://computingforpsychologists.wordpress.com/>`_ reports that the `PowerLab ADC <https://www.adinstruments.com/products/powerlab-daq-hardware>`_ and `CED1401 <https://www.adinstruments.com/products/powerlab-daq-hardware>`_ can be used for MRI acquisition.
 
-
-
 .. image:: pulse_0.jpg
   :width: 70%
   :align: center
 
 Scanner Synchronization
 -------------------------------------------
-
 
 .. image:: trigger-300x150.jpg
   :width: 70%
