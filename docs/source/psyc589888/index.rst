@@ -14,7 +14,7 @@ Details:
  - Course Code: (Undergrad) PSYC 589(Grad) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
  - When: Spring 20211:15-2:30 T/Th, Jan 12-Apr 22
  - Where:Hamilton 238 and Virtual Instruction
- - `Syllabus :download:`pdf <syl.pdf>`_
+ - Formal `Syllabus <https://drive.google.com/file/d/1HrzRlMt1iHVNIbzatMs8DpBRKdBItuGQ/view?usp=sharing>`_
  - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1olEutlOWRjtkofv8uiaM0bJ-ImJ104IHvnphcyySVNk/edit>`_
  - License: `the slides and material for this course are distributed under the Creative Commons license <https://creativecommons.org/licenses/by/3.0/>`_ . Further details are in the notes section of the PowerPoint file.
  - Textbook: `Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy <https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/>`_ .
