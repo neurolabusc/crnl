@@ -125,6 +125,12 @@ Links
  - `SPM course <https://www.fil.ion.ucl.ac.uk/spm/course/>`_ , and the `SPM8 manual <https://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf>`_ 
  - `NeuroDebian <https://neuro.debian.net/vm.html>`_ virtual machine is a great way for students to try out neuroimaging tools.
  - `Lin4Neuro <https://www.nemotos.net/lin4neuro/>`_ is an open source Linux distribution that comes with many of the most popular free MRI tools (FSL, MRIcron, etc) already installed.
+ 
+Homework
+
+Assignments added as they are posted:
+
+ - `Assignment 1 <https://drive.google.com/file/d/193ZF0YhVFYCaU2PkRpcQ_613o2cIB6D7/view?usp=sharing>`_
 
 Calendar
 -------------------------------------------
