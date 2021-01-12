@@ -12,7 +12,7 @@ Details:
  - Course Title: “Neuroimaging: from image to inference”.
  - Instructor: Chris Rorden : Office 227 Discovery I (John Absher will provide clinical lectures)
  - Course Code: (Undergrad) PSYC 589(Grad) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
- - When: Spring 20211:15-2:30 T/Th, Jan 12-Apr 22
+ - When: Spring 2021 1:15-2:30 T/Th, Jan 12-Apr 22
  - Where:Hamilton 238 and Virtual Instruction
  - Formal `Syllabus <https://drive.google.com/file/d/1HrzRlMt1iHVNIbzatMs8DpBRKdBItuGQ/view?usp=sharing>`_
  - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1olEutlOWRjtkofv8uiaM0bJ-ImJ104IHvnphcyySVNk/edit>`_
