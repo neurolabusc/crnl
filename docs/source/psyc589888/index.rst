@@ -85,6 +85,14 @@ Practicals
 
 Practicals will use Amazon Web Services. You will need to install the `Client Application <https://clients.amazonworkspaces.com/>`_. You will receive a user name and password for this system. The material extends the `FSL Training Course <https://fsl.fmrib.ox.ac.uk/fslcourse/>`_ .
 
+- Practical 1 (Thur. Jan. 14, 2021)
+	- Download the `Client Application <https://clients.amazonworkspaces.com/>`_
+	- Make sure AWS workspace logins work for everyone
+	- Getting to know your workspace
+	- Terminal (command line) basics
+	- Open neuroimaging data with MRIcroGL and FSLeyes
+	- Location of images for assignments
+
 
 Assessment and Assignments
 -------------------------------------------
