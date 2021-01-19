@@ -139,6 +139,7 @@ Homework
 Assignments added as they are posted:
 
  - `Assignment 1 <https://drive.google.com/file/d/193ZF0YhVFYCaU2PkRpcQ_613o2cIB6D7/view?usp=sharing>`_
+ - `Assignment 1 <https://drive.google.com/file/d/1wIiWZP1vPfVRW1WnHZDCT9hbwM6-HMe_/view?usp=sharing>`_
 
 Calendar
 -------------------------------------------
