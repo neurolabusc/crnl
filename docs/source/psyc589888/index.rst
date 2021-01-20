@@ -93,6 +93,14 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
 	- Open neuroimaging data with MRIcroGL and FSLeyes
 	- Location of images for assignments
 
+- Practical 2 (Thur. Jan. 21, 2021i)
+  - slides `here <https://docs.google.com/presentation/d/1y-qssxRlAMeaLBGSSsXG9gzA1_8-M7HUfj-JJ6h69Rc/edit?usp=sharing>`_
+  - Assignment 1 is due soon!
+  - Review drawing and saving images for assignments
+  - Overview of Brain extraction, mathematical operations on brain images, image registration/normalization
+  - Independent student exercises to work through
+  - Assignment 2 is posted
+
 
 Assessment and Assignments
 -------------------------------------------
