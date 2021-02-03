@@ -83,7 +83,8 @@ Lectures
 Practicals
 -------------------------------------------
 
-- Practicals will use Amazon Web Services. You will need to install the `Client Application <https://clients.amazonworkspaces.com/>`_. You will receive a user name and password for this system. The material extends the `FSL Training Course <https://fsl.fmrib.ox.ac.uk/fslcourse/>`_ .
+Practicals will use Amazon Web Services. You will need to install the `Client Application <https://clients.amazonworkspaces.com/>`_. You will receive a user name and password for this system. The material extends the `FSL Training Course <https://fsl.fmrib.ox.ac.uk/fslcourse/>`_ .
+
 
 - Practical 1 (Thur. Jan. 14, 2021)
 	- Download the `Client Application <https://clients.amazonworkspaces.com/>`_
@@ -93,6 +94,7 @@ Practicals
 	- Open neuroimaging data with MRIcroGL and FSLeyes
 	- Location of images for assignments
 
+
 - Practical 2 (Thur. Jan. 21, 2021)
   - slides `here <https://docs.google.com/presentation/d/1y-qssxRlAMeaLBGSSsXG9gzA1_8-M7HUfj-JJ6h69Rc/edit?usp=sharing>`_
   - Assignment 1 is due soon!
@@ -100,6 +102,7 @@ Practicals
   - Overview of Brain extraction, mathematical operations on brain images, image registration/normalization
   - Independent student exercises to work through
   - Assignment 2 is posted
+
 
 - Practical 3 (Thur. Feb. 4, 2021)
   - Introduction to the FSL Course material
