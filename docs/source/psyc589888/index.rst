@@ -96,21 +96,21 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
 
 
 - Practical 2 (Thur. Jan. 21, 2021)
-  - slides `here <https://docs.google.com/presentation/d/1y-qssxRlAMeaLBGSSsXG9gzA1_8-M7HUfj-JJ6h69Rc/edit?usp=sharing>`_
-  - Assignment 1 is due soon!
-  - Review drawing and saving images for assignments
-  - Overview of Brain extraction, mathematical operations on brain images, image registration/normalization
-  - Independent student exercises to work through
-  - Assignment 2 is posted
+  	- slides `here <https://docs.google.com/presentation/d/1y-qssxRlAMeaLBGSSsXG9gzA1_8-M7HUfj-JJ6h69Rc/edit?usp=sharing>`_
+  	- Assignment 1 is due soon!
+  	- Review drawing and saving images for assignments
+  	- Overview of Brain extraction, mathematical operations on brain images, image registration/normalization
+  	- Independent student exercises to work through
+  	- Assignment 2 is posted
 
 
 - Practical 3 (Thur. Feb. 4, 2021)
-  - Introduction to the FSL Course material
-  - Work through image registration, unwarping, and transforming image masks
-  - `Lab guide to follow <http://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/registration/index.html>`_
-  - First part of lab is instructor guided
-  - Remaining part of lab is at each student's own pace
-  - These exercises prepare you for the upcoming assignment
+  	- Introduction to the FSL Course material
+  	- Work through image registration, unwarping, and transforming image masks
+  	- `Lab guide to follow <http://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/registration/index.html>`_
+  	- First part of lab is instructor guided
+  	- Remaining part of lab is at each student's own pace
+  	- These exercises prepare you for the upcoming assignment
 
 
 Assessment and Assignments
