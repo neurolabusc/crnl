@@ -113,6 +113,22 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
   	- These exercises prepare you for the upcoming assignment
 
 
+- Practical 4 (Thur. Feb. 11, 2021)
+  	- Finsih registration, unwarping, and transforming image masks
+  	- `Lab guide to follow <http://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/registration/index.html>`_
+
+
+- Practical 5 (Thur. Feb. 18, 2021)
+  	- Start structural analysis (anatomical image segmentation)
+  	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/seg_struc/index.html>`_
+
+
+- Practical 6 (Thur. Feb. 25, 2021)
+  	- Finish structural analysis
+  	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/seg_struc/index.html>`_
+
+
+
 Assessment and Assignments
 -------------------------------------------
 
