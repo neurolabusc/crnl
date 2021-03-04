@@ -121,9 +121,15 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
 - Practical 5 (Thur. Feb. 18, 2021)
   	- Start structural analysis (anatomical image segmentation)
   	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/seg_struc/index.html>`_
+	
 
+- Practical 6 (Thur. Mar. 4, 2021)
+  	- Start FSL fMRI block design analysis
+  	- `Lab guide to follow <https://people.cas.sc.edu/rorden/tutorial/html/block.html>`_
+	- `Data to download <https://people.cas.sc.edu/rorden/SW/tutorial/tutorial.zip>`_
+	
 
-- Practical 6 (Thur. Feb. 25, 2021)
+- Practical 7 (Thur. Mar. 11, 2021)
   	- Finish structural analysis
   	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/seg_struc/index.html>`_
 
