@@ -137,6 +137,13 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
 - Practical 8 (Thur. Mar. 18, 2021)
   	- Single subject fMRI and Featquery
   	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/feat1/index.html>`_
+	
+
+- Practical 9 (Tues. Mar. 23, 2021)
+  	- Single subject fMRI (event design, finger tapping)
+	- `Data to download <https://people.cas.sc.edu/rorden/SW/tutorial/tutorial.zip>`_
+  	- `Lab guide <https://people.cas.sc.edu/rorden/tutorial/html/event.html>`_
+
 
 
 
