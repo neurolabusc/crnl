@@ -143,6 +143,11 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
   	- Single subject fMRI (event design, finger tapping)
 	- `Data to download <https://people.cas.sc.edu/rorden/SW/tutorial/tutorial.zip>`_
   	- `Lab guide <https://people.cas.sc.edu/rorden/tutorial/html/event.html>`_
+	
+
+- Practical 10 (Thur. Apr. 8, 2021)
+  	- group fMRI analysis
+  	- `Lab guide <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/feat2/index.html>`_
 
 
 
