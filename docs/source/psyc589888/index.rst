@@ -148,6 +148,11 @@ Practicals will use Amazon Web Services. You will need to install the `Client Ap
 - Practical 10 (Thur. Apr. 8, 2021)
   	- group fMRI analysis
   	- `Lab guide <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/feat2/index.html>`_
+	
+
+- Practical 11 (Tues. Apr. 20, 2021)
+  	- diffusion analysis
+  	- `Lab guide <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/fdt1/index.html>`_
 
 
 
