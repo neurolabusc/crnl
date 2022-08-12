@@ -10,10 +10,10 @@ Image to Inference (PSYC589/888)
 Details:
    
  - Course Title: “Neuroimaging: from image to inference”.
- - Instructor: Chris Rorden : Office 227 Discovery I (John Absher will provide clinical lectures)
- - Course Code: (Undergrad) PSYC 589(Grad) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
- - When: Spring 2021 1:15-2:30 T/Th, Jan 12-Apr 22
- - Where:Hamilton 238 and Virtual Instruction
+ - Instructor: Chris Rorden : Office 227 Discovery I (guest lecturers from John Absher, Roger Newman-Norlund and Natalie Hetherington)
+ - Course Code: (Undergrad, CRN 19184) PSYC 589(Grad, CRN 12488) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
+ - When: Fall 2022 1:15-2:30 T/Th, Jan 12-Apr 22
+ - Where:Hamilton 238
  - Formal `Syllabus <https://drive.google.com/file/d/1HrzRlMt1iHVNIbzatMs8DpBRKdBItuGQ/view?usp=sharing>`_
  - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1olEutlOWRjtkofv8uiaM0bJ-ImJ104IHvnphcyySVNk/edit>`_
  - License: `the slides and material for this course are distributed under the Creative Commons license <https://creativecommons.org/licenses/by/3.0/>`_ . Further details are in the notes section of the PowerPoint file.
@@ -78,89 +78,12 @@ Lectures
 
 - Brain stimulation: Transcranial Magnetic Stimulation (TMS), Transcranial Direct Current Stimulation (tDCS). Roger Newman-Norlund and Chris Rorden
  
-- Student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
-
-Practicals
--------------------------------------------
-
-Practicals will use Amazon Web Services. You will need to install the `Client Application <https://clients.amazonworkspaces.com/>`_. You will receive a user name and password for this system. The material extends the `FSL Training Course <https://fsl.fmrib.ox.ac.uk/fslcourse/>`_ .
-
-
-- Practical 1 (Thur. Jan. 14, 2021)
-	- Download the `Client Application <https://clients.amazonworkspaces.com/>`_
-	- Make sure AWS workspace logins work for everyone
-	- Getting to know your workspace
-	- Terminal (command line) basics
-	- Open neuroimaging data with MRIcroGL and FSLeyes
-	- Location of images for assignments
-
-
-- Practical 2 (Thur. Jan. 21, 2021)
-  	- slides `here <https://docs.google.com/presentation/d/1y-qssxRlAMeaLBGSSsXG9gzA1_8-M7HUfj-JJ6h69Rc/edit?usp=sharing>`_
-  	- Assignment 1 is due soon!
-  	- Review drawing and saving images for assignments
-  	- Overview of Brain extraction, mathematical operations on brain images, image registration/normalization
-  	- Independent student exercises to work through
-  	- Assignment 2 is posted
-
-
-- Practical 3 (Thur. Feb. 4, 2021)
-  	- Introduction to the FSL Course material
-  	- Work through image registration, unwarping, and transforming image masks
-  	- `Lab guide to follow <http://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/registration/index.html>`_
-  	- First part of lab is instructor guided
-  	- Remaining part of lab is at each student's own pace
-  	- These exercises prepare you for the upcoming assignment
-
-
-- Practical 4 (Thur. Feb. 11, 2021)
-  	- Finsih registration, unwarping, and transforming image masks
-  	- `Lab guide to follow <http://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/registration/index.html>`_
-
-
-- Practical 5 (Thur. Feb. 18, 2021)
-  	- Start structural analysis (anatomical image segmentation)
-  	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/seg_struc/index.html>`_
-	
-
-- Practical 6 (Thur. Mar. 4, 2021)
-  	- Start FSL fMRI block design analysis
-  	- `Lab guide to follow <https://people.cas.sc.edu/rorden/tutorial/html/block.html>`_
-	- `Data to download <https://people.cas.sc.edu/rorden/SW/tutorial/tutorial.zip>`_
-	
-
-- Practical 7 (Thur. Mar. 11, 2021)
-  	- Finish structural analysis
-  	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/seg_struc/index.html>`_
-
-
-- Practical 8 (Thur. Mar. 18, 2021)
-  	- Single subject fMRI and Featquery
-  	- `Lab guide to follow <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/feat1/index.html>`_
-	
-
-- Practical 9 (Tues. Mar. 23, 2021)
-  	- Single subject fMRI (event design, finger tapping)
-	- `Data to download <https://people.cas.sc.edu/rorden/SW/tutorial/tutorial.zip>`_
-  	- `Lab guide <https://people.cas.sc.edu/rorden/tutorial/html/event.html>`_
-	
-
-- Practical 10 (Thur. Apr. 8, 2021)
-  	- group fMRI analysis
-  	- `Lab guide <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/feat2/index.html>`_
-	
-
-- Practical 11 (Tues. Apr. 20, 2021)
-  	- diffusion analysis
-  	- `Lab guide <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/practicals/fdt1/index.html>`_
-
-
-
+- Graduate student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
 
 Assessment and Assignments
 -------------------------------------------
 
-The final grade is weighted 30% quizzes, 40% on homework assignments and 30% on the essay. Letter grades assigned as follows A = 90-100%, B = 80-90%, C = 70-80%, D = 60-70%, F = <60%. Graduate students (PSYC888) must also present a research article as a class presentation 45 minute. This presentation is scored as pass or fail that modifies the grade on the essay by x1.0 (pass) or x0.5 (fail), so that a perfect essay (100%) with a failed presentation (x0.5) yields a weighted score of 50%. Material from this article will be included in the quiz, so underdraduates will want to pay careful attention to this presentation. Homework description: Students will submit regular homework assignments, which are due at noon on their due date. Assignments are due in the students' dropbox folder unless otherwise specified. Essay description: Students will write an essay that describes the merits, limitations and potential of a current or potential technique used to infer brain function. Essays should extend beyond the information in the course. Examples include: ERP vs fMRI, MEG, functional connectivity, Independent Component Analysis, Adaptation Designs.
+The final grade is weighted 30% quizzes, 40% on homework assignments and 30% on the essay. Letter grades assigned as follows A = 90-100%, B = 80-90%, C = 70-80%, D = 60-70%, F = <60%. Graduate students (PSYC888) must also present a research article as a class presentation. This presentation is scored as pass or fail that modifies the grade on the essay by x1.0 (pass) or x0.5 (fail), so that a perfect essay (100%) with a failed presentation (x0.5) yields a weighted score of 50%. Material from this article will be included in the quiz, so underdraduates will want to pay careful attention to this presentation. Homework description: Students will submit regular homework assignments, which are due at noon on their due date. Assignments are due in the students' dropbox folder unless otherwise specified. Essay description: Students will write an essay that describes the merits, limitations and potential of a current or potential technique used to infer brain function. Essays should extend beyond the information in the course. Examples include: ERP vs fMRI, MEG, functional connectivity, Independent Component Analysis, Adaptation Designs.
 
 Learning Outcomes
 -------------------------------------------
@@ -207,34 +130,39 @@ Assignments added as they are posted:
 Calendar
 -------------------------------------------
 
-This course follows the `Spring 2021 academic calendar <https://sc.edu/about/offices_and_divisions/registrar/academic_calendars/2020-21_calendar.php>`_ . Classes being
+This course follows the `Fall 2022 academic calendar <https://sc.edu/about/offices_and_divisions/registrar/academic_calendars/2022-23_calendar.php>`_ .
 
- - Tu 12 Jan
- - Th 14 Jan
- - Tu 19 Jan
- - Th 21 Jan
- - Tu 26 Jan
- - Th 28 Jan
- - Tu 2 Feb
- - Th 4 Feb
- - Tu 9 Feb
- - Th 11 Feb
- - Tu 16 Feb
- - Th 18 Feb
- - Tu 23 Feb
- - Th 25 Feb (Wellness Holiday)
- - Tu 2 Mar
- - Th 4 Mar
- - Tu 16 Mar
- - Th 18 Mar
- - Tu 23 Mar
- - Th 25 Mar
- - Tu 30 Mar (Wellness Holiday)
- - Th 1 Apr
- - Tu 6 Apr
- - Th 8 Apr
- - Tu 13 Apr
- - Th 15 Apr
- - Tu 20 Apr
- - Th 22 Apr
+Schedule
+
+Aug 18
+Aug 23
+Aug 25
+Aug 30
+Sep 1
+Sep 6
+Sep 8
+Sep 13
+Sep 15
+Sep 20
+Sep 22
+Sep 27
+Sep 29
+Oct 4
+Oct 6
+Oct 11 
+Oct 13 Fall Break  (no classes)
+Oct 18
+Oct 20
+Oct 25
+Oct 27
+Nov 1
+Nov 3
+Nov 8 General Election Day (no classes)
+Nov 10
+Nov 15
+Nov 17
+Nov 22
+Nov 24 Thanskgiving (no classes)
+Nov 29
+Dec 1
  
