@@ -10,11 +10,11 @@ Image to Inference (PSYC589/888)
 Details:
    
  - Course Title: “Neuroimaging: from image to inference”.
- - Instructor: Chris Rorden : Office 227 Discovery I (guest lecturers from John Absher, Roger Newman-Norlund and Natalie Hetherington)
+ - Instructor: Chris Rorden : Office 227 Discovery I (guest lecturers from John Absher, Roger Newman-Norlund, Alex Teghipco and Natalie Hetherington)
  - Course Code: (Undergrad, CRN 19184) PSYC 589(Grad, CRN 12488) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
  - When: Fall 2022 1:15-2:30 T/Th, Jan 12-Apr 22
  - Where:Hamilton 238
- - Formal `Syllabus <https://drive.google.com/file/d/1HrzRlMt1iHVNIbzatMs8DpBRKdBItuGQ/view?usp=sharing>`_
+ - Formal `Syllabus <https://drive.google.com/file/d/18WtMve8rrFGCZU1CLDEBfhMPDNPDBZRt/view?usp=sharing>`_
  - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1olEutlOWRjtkofv8uiaM0bJ-ImJ104IHvnphcyySVNk/edit>`_
  - License: `the slides and material for this course are distributed under the Creative Commons license <https://creativecommons.org/licenses/by/3.0/>`_ . Further details are in the notes section of the PowerPoint file.
  - Textbook: `Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy <https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/>`_ .
@@ -134,35 +134,5 @@ This course follows the `Fall 2022 academic calendar <https://sc.edu/about/offic
 
 Schedule
 
-Aug 18
-Aug 23
-Aug 25
-Aug 30
-Sep 1
-Sep 6
-Sep 8
-Sep 13
-Sep 15
-Sep 20
-Sep 22
-Sep 27
-Sep 29
-Oct 4
-Oct 6
-Oct 11 
-Oct 13 Fall Break  (no classes)
-Oct 18
-Oct 20
-Oct 25
-Oct 27
-Nov 1
-Nov 3
-Nov 8 General Election Day (no classes)
-Nov 10
-Nov 15
-Nov 17
-Nov 22
-Nov 24 Thanskgiving (no classes)
-Nov 29
-Dec 1
+The final grade is weighted 30% quizzes, 40% on homework assignments and 30% on the essay. Letter grades assigned as follows A = 90-100%, B = 80-90%, C = 70-80%, D = 60-70%, F = <60%. Graduate students (PSYC888) must also present a research article as a class presentation. This presentation is scored as pass or fail that modifies the grade on the essay by x1.0 (pass) or x0.5 (fail), so that a perfect essay (100%) with a failed presentation (x0.5) yields a weighted score of 50%. Material from this article will be included in the quiz, so underdraduates will want to pay careful attention to this presentation. Homework description: Students will submit regular homework assignments, which are due at noon on their due date. Assignments are due in the students’ dropbox folder unless otherwise specified. Essay description: Students will write an essay that describes the merits, limitations and potential of a current or potential technique used to infer brain function. Essays should extend beyond the information in the course. Examples include: ERP vs fMRI, MEG, functional connectivity, Independent Component Analysis, Adaptation Designs.
  
