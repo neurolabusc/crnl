@@ -14,8 +14,8 @@ Details:
  - Course Code: (Undergrad, CRN 19184) PSYC 589(Grad, CRN 12488) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
  - When: Fall 2022 1:15-2:30 T/Th, Aug 18-Dec 1
  - Where:Hamilton 238
- - Formal `Syllabus <https://drive.google.com/file/d/18WtMve8rrFGCZU1CLDEBfhMPDNPDBZRt/view?usp=sharing>`_
- - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1olEutlOWRjtkofv8uiaM0bJ-ImJ104IHvnphcyySVNk/edit>`_
+ - Formal `Syllabus <https://docs.google.com/document/d/1Wd2daWbyBJ_0i-MLrjuw1ZMZIAg8IcfU/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true>`_
+ - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing>`_
  - License: `the slides and material for this course are distributed under the Creative Commons license <https://creativecommons.org/licenses/by/3.0/>`_ . Further details are in the notes section of the PowerPoint file.
  - Textbook: `Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy <https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/>`_ .
  - Supplemental textbook: `Poldrack et al. <https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664/ref=sr_1_1?ie=UTF8&amp;qid=1345812543&amp;sr=8-1&amp;keywords=poldrack"/>`_.
