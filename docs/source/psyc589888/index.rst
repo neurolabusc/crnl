@@ -1,4 +1,4 @@
-Image to Inference (PSYC589/888)
+Image to Inference (PSYC589/88 CRN529948/48893)
 ==========================================
 
 .. _my_psyc589888:
@@ -12,8 +12,8 @@ Details:
  - Course Title: “Neuroimaging: from image to inference”.
  - Instructor: Chris Rorden : Office 227 Discovery I (guest lecturers from John Absher, Roger Newman-Norlund, Alex Teghipco and Natalie Hetherington)
  - Course Code: (Undergrad, CRN 19184) PSYC 589(Grad, CRN 12488) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
- - When: Fall 2022 1:15-2:30 T/Th, Aug 18-Dec 1
- - Where:Hamilton 238
+ - When: Spring 2025 T/Th 10:05-11:20 AM, Aug 18-Dec 1
+ - Where: Discovery 259
  - Formal `Syllabus <https://docs.google.com/document/d/1Wd2daWbyBJ_0i-MLrjuw1ZMZIAg8IcfU/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true>`_
  - Course slides: `Google Slides format <https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing>`_
  - License: `the slides and material for this course are distributed under the Creative Commons license <https://creativecommons.org/licenses/by/3.0/>`_ . Further details are in the notes section of the PowerPoint file.
