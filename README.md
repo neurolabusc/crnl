@@ -1,7 +1,5 @@
 # Chris Rorden's Neuropsychology Lab
 
-Useful notes and documentation
-
  - [About our team](./about/index.md)
   - [C-STAR Center for the Study of Aphasia Recovery](https://cstar.sc.edu/)
   - [Directions](./directions/index.md)
