@@ -1,13 +1,13 @@
-# Chris Rorden's Neuropsychology Lab
+## Chris Rorden's Neuropsychology Lab
 
- - [About our team](./about/index.md)
+[About our team](./about/index.md)
   - [C-STAR Center for the Study of Aphasia Recovery](https://cstar.sc.edu/)
   - [Directions](./directions/index.md)
   - [McCausland Center for Brain Imaging](https://sc.edu/study/colleges_schools/artsandsciences/centers_and_institutes/mccausland_center/index.php)
- - Classes
+Classes
   - [PSYC450 sensation and perception](./psyc450/index.md)
   - [PSYC589/888 image to inference](./psyc589888/index.md)
- - Technical Notes
+Technical Notes
   - [Arterial spin labeling](./asl/index.md)
   - [Do it yourself fMRI](./diy_fmri/index.md)
   - [Diffusion imaging](./dti/index.md)
