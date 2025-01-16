@@ -1,10 +1,9 @@
 ## Chris Rorden's Neuropsychology Lab
 
-[About our team](./about/index.md)
-
+ - [About us: Team members, Topics and Tools](./about/index.md)
  - [C-STAR Center for the Study of Aphasia Recovery](https://cstar.sc.edu/)
- - [Directions](./directions/index.md)
  - [McCausland Center for Brain Imaging](https://sc.edu/study/colleges_schools/artsandsciences/centers_and_institutes/mccausland_center/index.php)
+ - [Directions](./directions/index.md)
 
 Classes
 
