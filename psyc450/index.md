@@ -241,7 +241,7 @@ this course
   - Frequencies: We can take a sharp (focused) and blurry (unfocused) image of the same scene to show low frequencies. We can compute the difference between these two images to reveal the high frequencies (edges). Adding the high frequency to the original image emphasizes the edges, a method referred to as an [unsharp mask](https://github.com/rordenlab/spmScripts/blob/master/bmp_unsharpmask.m).
   - We can measure neural conduction time by using transcranial magnetic stimulation \[TMS\] to cause a finger movement. We can then measure the motor evoke potential to see the transmission delay time from the brain to the finger.
   - [Fourier Transform to visualize the impact of filters](https://github.com/neurolabusc/biquad-filter)
-  - David Heeger's Signal Detection [Matlab tutorial](http://www.cns.nyu.edu/~david/courses/perceptionGrad/syllabus2013.html)
+  - David Heeger's Signal Detection [tutorial](https://www.cns.nyu.edu/~david/courses/perceptionGrad/syllabus2023.html)
 
 - Chapter 2: Light to neural signals  
   - Focal length and aperture: We can make pin hole cameras with different focal lengths (camera body caps with holes drilled in the center, lens adapters provide different focal length). We can adjust the aperture of a lens to reveal different depth of field and light transmission.
@@ -274,7 +274,7 @@ this course
 
 - Chapter 8: Motion perception  
   - [The color wagon wheel shows that motions perception is color blind - isoluminant stimuli modulate our perception.](https://michaelbach.de/ot/mot-wagonWheelCol/index.html)
-  - [Motion after effects](https://www.gla.ac.uk/research/az/cspe/illusions/)
+  - [Motion after effects](https://www.illusionsindex.org/)
   - Waterfall illusion (motion adaptation)
   - Saccadic suppression: look at your eyes in the mirror - shift gaze from left to right eyes: note you only sees your eyes when they are still. Watch someone else doing this to see what you are missing.
   - Biological motion

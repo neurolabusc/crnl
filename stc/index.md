@@ -27,7 +27,7 @@ The image on the right shows two fMRI volumes from a Siemens scanner using an as
 
 ![interleaved](interleaved.jpg)
 
-You have a couple options to determine the slice order you can either look at your [scanner console](http://cbs.fas.harvard.edu/node/559#slice_order), look at the “Series” in your protocol PDF files (shown in red in the image on the right – ignore the “multi-slice mode”), or use software that detects this for you when converting your DICOM files for subsequent processing (for example, dcm2nii since 2014 do this for Siemens images).
+You have a couple options to determine the slice order you can either look at your scanner console, look at the “Series” in your protocol PDF files (shown in red in the image on the right – ignore the “multi-slice mode”), or use software that detects this for you when converting your DICOM files for subsequent processing (for example, dcm2nii since 2014 do this for Siemens images).
 
 Another question regards what direction ‘ascending’ and ‘descending’ refer to. For axial slices it seems obvious that ascending refers to acquisitions that begin near the feet and move toward the head. But what does ‘ascending’ versus ‘descending’ refer to for sagittal and coronal sequences? One way to discover this is to look at the PDFs that you can create for your sequence. As shown in the image on the right, ascending for sagittal scans refers to right-to-left (R&gt;&gt;L), for coronal sequences ascending is anterior-to-posterior (A&gt;&gt;P) and for transverse (axial) slices the order is the expected foot-to-head (F&gt;&gt;H). This appears to be the default for Siemens MRI.
 
@@ -51,6 +51,5 @@ Typically, we acquire fMRI data continuously with no gaps between volumes. There
 
  - The [practiCal page](https://practicalfmri.blogspot.com/2012/07/siemens-slice-ordering.html) has a nice description of slice timing.
  - [Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3167249/) demonstrating how slice timing can help.
- - The [HCP webpage](https://wiki.humanconnectome.org/display/PublicData/HCP+fMRI+slice-timing+acquisition+parameters) includes the details for users of the popular CMRR sequences.
  - Siemens includes a [white paper](https://www.magnetomworld.siemens-healthineers.com/clinical-corner/application-tips/slice-order-fmri.html) describing slice order.
  - There is a nice [wiki page](https://en.wikibooks.org/w/index.php?title=SPM/Slice_Timing#Slice_Order) on slice order.

@@ -13,7 +13,7 @@
  - Course slides: [Google Slides format](https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing)
  - License: [the slides and material for this course are distributed under the Creative Commons license](https://creativecommons.org/licenses/by/3.0/) . Further details are in the notes section of the PowerPoint file.
 - Textbook: [Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy](https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/).
-- Supplemental textbook: [Poldrack et al.](https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664/ref=sr_1_1?ie=UTF8&amp;qid=1345812543&amp;sr=8-1&amp;keywords=poldrack"/).
+- Supplemental textbook: [Poldrack et al.](https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664).
 
 ### Description:
 
@@ -44,7 +44,7 @@ Functional magnetic resonance imaging is a recent and powerful tool for inferrin
 - Detecting subtle changes in brain structure: Voxel Based Morphometry and Diffusion Tensor Imaging.
  - [John Ashburner's VBM class (PDF)](https://www.fil.ion.ucl.ac.uk/~john/misc/VBMclass10.pdf).
  - [DTI tutorial](https://people.cas.sc.edu/rorden/tutorial/html/dti.html).
- - [Advanced DTI tutorial](../dti.index.md).
+ - [Advanced DTI tutorial](../dti/index.md).
  - Brain injury and neuroimaging. Measuring blood flow and using lesion symptom mapping to understand the consequences of stroke and other neurological disorders.
  - [Arterial Spin Labeling](../asl/index.md).
  - Contrast-enhanced (Gadolinium) [Perfusion Weighted Imaging](../pwi/index.md).
