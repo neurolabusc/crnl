@@ -6,7 +6,7 @@ Useful notes and documentation
  - [Arterial spin labeling](./asl/index.md)
  - [C-STAR Center for the Study of Aphasia Recovery](https://cstar.sc.edu/)
  - [Directions](./directions/index.md)
- - [Do it yourself fMRI](./fmri/index.md)
+ - [Do it yourself fMRI](./diy_fmri/index.md)
  - [Diffusion imaging](./dti/index.md)
  - [Fieldmaps](./fieldmaps/index.md)
  - [JPEG compression in DICOM](./jpeg_formats/index.md)
