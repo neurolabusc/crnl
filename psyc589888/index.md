@@ -10,7 +10,9 @@
  - When: Spring 2025 T/Th 10:05-11:20 AM, Aug 18-Dec 1
  - Where: Discovery 259
  - Formal [Syllabus](https://docs.google.com/document/d/1Wd2daWbyBJ_0i-MLrjuw1ZMZIAg8IcfU/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true)
- - Course slides: [Google Slides format](https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing)
+ - Old course slides: [Google Slides format](https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing)
+ - New course slides: [Google Slides format](https://docs.google.com/presentation/d/15v3TvxnCAj4wJQm7IWIM6lpEmKUox1Z6DpINysKSmLM/edit?usp=sharing)
+
  - License: [the slides and material for this course are distributed under the Creative Commons license](https://creativecommons.org/licenses/by/3.0/) . Further details are in the notes section of the PowerPoint file.
 - Textbook: [Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy](https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/).
 - Supplemental textbook: [Poldrack et al.](https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664).
