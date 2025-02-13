@@ -12,7 +12,6 @@
  - Formal [Syllabus](https://docs.google.com/document/d/1Wd2daWbyBJ_0i-MLrjuw1ZMZIAg8IcfU/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true)
  - Old course slides: [Google Slides format](https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing)
  - New course slides: [Google Slides format](https://docs.google.com/presentation/d/15v3TvxnCAj4wJQm7IWIM6lpEmKUox1Z6DpINysKSmLM/edit?usp=sharing)
-
  - License: [the slides and material for this course are distributed under the Creative Commons license](https://creativecommons.org/licenses/by/3.0/) . Further details are in the notes section of the PowerPoint file.
 - Textbook: [Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy](https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/).
 - Supplemental textbook: [Poldrack et al.](https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664).
@@ -23,36 +22,36 @@ Functional magnetic resonance imaging is a recent and powerful tool for inferrin
 
 ### Lectures
 
-- Overview.
- - The classroom is a computer lab, so all assignments can be completed using your computer. Computation is supported by [NSF ACCESS (SOC250003)](https://support.access-ci.org/) using the Indiana Jetstream2 supercomputer and [neurodesk](https://github.com/NeuroDesk). 
-- MRI physics: Image Acquisition.
- - [Terrific videos](https://magritek.com/resources/videos/) (from a company that makes a unique instructional MRI system
-- MRI physics: Image Contrast.
- - Echo time and repetition time influence [T1 (recovery) and T (dephasing)](https://case.edu/med/neurology/NR/MRI%20Basics.htm).
-- fMRI Paradigm Design.
- - My [fMRI simulator](https://github.com/neurolabusc/fMRI-Simulator) allows you to explore the hemodynamic changes induced by different tasks.
-- Statistics and Thresholding.
- - [cluster extent challenges](https://andysbrainblog.blogspot.com/2014/01/how-to-avoid-common-cluster-extent.html)
-- Spatial Processing I: Spatial Registration – realignment (motion correction), coregistration, normalization; Spatial interpolation – linear, spline, sinc functions
- - [Spatial Processing Demos](https://github.com/neurolabusc/spatial-processing).
-- Spatial Processing Continued II: Smoothing – filters, edge detection, gaussian blur, homogeneity correction (for EPI and anatomical scans), motion related intensity changes.
- - [Undistorting fMRI EPI data using the SPM FieldMap toolbox](../fieldmaps/index.md).
-- Temporal Processing
- - [Interactive filtering demo](https://github.com/neurolabusc/biquad-filter) shows how low-pass, high-pass and notch filters modulate a signal.
- - [Physiological Artifact Removal Tool](https://github.com/neurolabusc/Part) .
-- FSL and SPM. Hands on demonstrations
- - [fMRI analysis](https://people.cas.sc.edu/rorden/tutorial/index.html).
- - [FSL: block design](https://people.cas.sc.edu/rorden/tutorial/html/block.html).
-- Detecting subtle changes in brain structure: Voxel Based Morphometry and Diffusion Tensor Imaging.
- - [John Ashburner's VBM class (PDF)](https://www.fil.ion.ucl.ac.uk/~john/misc/VBMclass10.pdf).
- - [DTI tutorial](https://people.cas.sc.edu/rorden/tutorial/html/dti.html).
- - [Advanced DTI tutorial](../dti/index.md).
- - Brain injury and neuroimaging. Measuring blood flow and using lesion symptom mapping to understand the consequences of stroke and other neurological disorders.
- - [Arterial Spin Labeling](../asl/index.md).
- - Contrast-enhanced (Gadolinium) [Perfusion Weighted Imaging](../pwi/index.md).
- - [VLSM using my NPM software](https://people.cas.sc.edu/rorden/mricron/stats.html)
- - Brain stimulation: Transcranial Magnetic Stimulation (TMS), Transcranial Direct Current Stimulation (tDCS). Roger Newman-Norlund and Chris Rorden
-- Graduate student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
+  - Overview.
+    - The classroom is a computer lab, so all assignments can be completed using your computer. Computation is supported by [NSF ACCESS (SOC250003)](https://support.access-ci.org/) using the Indiana Jetstream2 supercomputer and [neurodesk](https://github.com/NeuroDesk). 
+  - MRI physics: Image Acquisition.
+    - [Terrific videos](https://magritek.com/resources/videos/) (from a company that makes a unique instructional MRI system
+  - MRI physics: Image Contrast.
+    - Echo time and repetition time influence [T1 (recovery) and T (dephasing)](https://case.edu/med/neurology/NR/MRI%20Basics.htm).
+  - fMRI Paradigm Design.
+    - My [fMRI simulator](https://github.com/neurolabusc/fMRI-Simulator) allows you to explore the hemodynamic changes induced by different tasks.
+  - Statistics and Thresholding.
+    - [cluster extent challenges](https://andysbrainblog.blogspot.com/2014/01/how-to-avoid-common-cluster-extent.html)
+  - Spatial Processing I: Spatial Registration – realignment (motion correction), coregistration, normalization; Spatial interpolation – linear, spline, sinc functions
+    - [Spatial Processing Demos](https://github.com/neurolabusc/spatial-processing).
+  - Spatial Processing Continued II: Smoothing – filters, edge detection, gaussian blur, homogeneity correction (for EPI and anatomical scans), motion related intensity changes.
+    - [Undistorting fMRI EPI data using the SPM FieldMap toolbox](../fieldmaps/index.md).
+  - Temporal Processing
+    - [Interactive filtering demo](https://github.com/neurolabusc/biquad-filter) shows how low-pass, high-pass and notch filters modulate a signal.
+    - [Physiological Artifact Removal Tool](https://github.com/neurolabusc/Part) .
+  - FSL and SPM. Hands on demonstrations
+    - [fMRI analysis](https://people.cas.sc.edu/rorden/tutorial/index.html).
+    - [FSL: block design](https://people.cas.sc.edu/rorden/tutorial/html/block.html).
+  - Detecting subtle changes in brain structure: Voxel Based Morphometry and Diffusion Tensor Imaging.
+    - [John Ashburner's VBM class (PDF)](https://www.fil.ion.ucl.ac.uk/~john/misc/VBMclass10.pdf).
+    - [DTI tutorial](https://people.cas.sc.edu/rorden/tutorial/html/dti.html).
+    - [Advanced DTI tutorial](../dti/index.md).
+    - Brain injury and neuroimaging. Measuring blood flow and using lesion symptom mapping to understand the consequences of stroke and other neurological disorders.
+    - [Arterial Spin Labeling](../asl/index.md).
+    - Contrast-enhanced (Gadolinium) [Perfusion Weighted Imaging](../pwi/index.md).
+    - [VLSM using my NPM software](https://people.cas.sc.edu/rorden/mricron/stats.html)
+  - Brain stimulation: Transcranial Magnetic Stimulation (TMS), Transcranial Direct Current Stimulation (tDCS). Roger Newman-Norlund and Chris Rorden
+  - Graduate student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
 
 ### Links
 
