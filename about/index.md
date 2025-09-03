@@ -2,21 +2,20 @@
 
 ## Team
 
- - Chris Rorden is the endowed chair of neuroimaging in the Department of Psychology at the University of South Carolina. He is also the director for the McCausland Center for Brain Imaging. He completed his PhD at the University of Cambridge under the supervision of Jon Driver. He completed post-doctoral work at with University College London and the MRC Cognition and Brain Sciences Unit. He has held faculty positions at the University of Nottingham, Georgia Institute of Technology and the University of South Carolina. His [CV](https://docs.google.com/document/d/1dwkSYHJ-RT3RxIX4nS4rpwUSben1oxW3/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true) and [bibliography](https://www.ncbi.nlm.nih.gov/myncbi/christopher.rorden.1/bibliography/public/) are online.
+ - Chris Rorden is the endowed chair of neuroimaging in the Department of Psychology at the University of South Carolina. He is also the director for the McCausland Center for Brain Imaging. He completed his PhD at the University of Cambridge under the supervision of Jon Driver. He completed post-doctoral work at with University College London and the MRC Cognition and Brain Sciences Unit. He has held faculty positions at the University of Nottingham, Georgia Institute of Technology and the University of South Carolina. His [CV](https://docs.google.com/document/d/1dwkSYHJ-RT3RxIX4nS4rpwUSben1oxW3/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true) and [bibliography](https://www.ncbi.nlm.nih.gov/myncbi/christopher.rorden.1/bibliography/public/) are online. He leads the neuroimaging core and is a MPI for a research project in the [Center for the Study of Aphasia Recovery (C-STAR)](https://cstar.sc.edu/research-team/). In addition, he supports the neuroimaging for the [Aging Brain Cohort](https://abc.sc.edu/research-team/).
 
-![Chris Rorden](chris_rorden.jpg)
+![Chris Rorden](250722_chris_rorden.jpg)
 
- - Roger Newman-Norlund serves as the managing director for the McCausland Center for Brain Imaging. He graduated from Dartmouth College with a doctorate in Cognitive Neuroscience and spent five years as a postdoctoral scientist at the  Donders Institute for Brain, Behavior and Cognition. His [bibliography](https://www.ncbi.nlm.nih.gov/myncbi/1lCSfEEY11GQX/bibliography/public/) is online.
+ - Makayla Gibson serves as a postdoctoral research fellow for the team. In addition, she is the managing director for the McCausland Center for Brain Imaging. She completed her PhD at the University of South Carolina in 2025. Her work explores neuroimaging measures of brain health that predict resiliency to stroke. Her [bibliography](https://pubmed.ncbi.nlm.nih.gov/?term=Makayla+Gibson%5BAuthor%5D&sort=date) is online.
 
-![Roger Newman-Norlund](roger.jpg)
+![Makayla Gibson](250722_makayla_gibson.jpg)
 
- - Makayla Gibson is completing a PhD with the team. Her work explores neuroimaging measures of brain health that predict resiliency to stroke. Her [bibliography](https://pubmed.ncbi.nlm.nih.gov/?term=Makayla+Gibson%5BAuthor%5D&sort=date) is online.
+ - Chris Drake is the team's Research Software Engineer (RSE), leading development of our team's [NiiVue](https://github.com/niivue/niivue) software. His tools also support the other scientists and clinicians involved with C-STAR He has previously worked with Google, Microsoft and the US military.
 
-![Makayla Gibson](makayla.png)
+![Chris Drake](250722_chris_drake.jpg)
 
- - Chris Drake is a software developer, spearheading our team's [NiiVue](https://github.com/niivue/niivue) software. He has previously worked with Google, Microsoft and the US military.
+ - Alexis Callen is pursuing her PhD with our team. Before joining us, she conducted [research](https://pubmed.ncbi.nlm.nih.gov/?sort=date&term=Callen+AM&cauthor_id=39240345) using ultra-high field magnetic resonance imaging, work that provides a strong foundation for her future role at the new [Brain Health Center](https://sc.edu/about/offices_and_divisions/facilities/current_projects/brain_health_center/). There, she will help lead projects using the Center’s state-of-the-art 7T MRI scanner, which features groundbreaking parallel-transmit capabilities.
 
-![Chris Drake](chris_drake.jpg)
 
 ## Topics
 
