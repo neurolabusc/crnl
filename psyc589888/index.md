@@ -4,14 +4,17 @@
 
 ### Details:
 
+PSYC 888 CRN 49444
+PSYC 589 CRN 44362
+TTh 10:05am-11:20am in 
  - Course Title: “Neuroimaging: from image to inference”.
- - Instructor: Chris Rorden : Office 227 Discovery I (guest lecturers from John Absher, Roger Newman-Norlund, Alex Teghipco and Natalie Hetherington)
- - Course Code: (Undergrad, CRN 19184) PSYC 589(Grad, CRN 12488) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
- - When: Spring 2025 T/Th 10:05-11:20 AM, Aug 18-Dec 1
- - Where: Discovery 259
+ - Instructor: [Dr Chris Rorden](https://neurolabusc.github.io/crnl/about/) : Office 138 Discovery I
+ - Lab Manager:  [Dr Makayla Gibson](https://neurolabusc.github.io/crnl/about/)
+ - Course Code: [PSYC589](https://classes.sc.edu/?details&srcdb=202601&crn=44362) (Undergrad, CRN 44362) [PSYC888](https://classes.sc.edu/?details&srcdb=202601&crn=49444)(Grad, CRN49444) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
+ - When: Spring 2026 T/Th 10:05am-11:20am, 13 Jan - 23 Apr
+ - Where: [Discovery I Building](https://sc.edu/visit/map/?id=744#!m/223310?share) Room 259
  - Formal [Syllabus](https://docs.google.com/document/d/1Wd2daWbyBJ_0i-MLrjuw1ZMZIAg8IcfU/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true)
- - Old course slides: [Google Slides format](https://docs.google.com/presentation/d/1Gmc3N7skPQ-nreiVxirtPIsniR4H-l0ERyTn2Ps9qRQ/edit?usp=sharing)
- - New course slides: [Google Slides format](https://docs.google.com/presentation/d/15v3TvxnCAj4wJQm7IWIM6lpEmKUox1Z6DpINysKSmLM/edit?usp=sharing)
+ - Course slides: [Google Slides](https://docs.google.com/presentation/d/15v3TvxnCAj4wJQm7IWIM6lpEmKUox1Z6DpINysKSmLM/edit?usp=sharing)
  - License: [the slides and material for this course are distributed under the Creative Commons license](https://creativecommons.org/licenses/by/3.0/) . Further details are in the notes section of the PowerPoint file.
 - Textbook: [Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy](https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/).
 - Supplemental textbook: [Poldrack et al.](https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664).
@@ -23,7 +26,7 @@ Functional magnetic resonance imaging is a recent and powerful tool for inferrin
 ### Lectures
 
   - Overview.
-    - The classroom is a computer lab, so all assignments can be completed using your computer. Computation is supported by [NSF ACCESS (SOC250003)](https://support.access-ci.org/) using the Indiana Jetstream2 supercomputer and [neurodesk](https://github.com/NeuroDesk). 
+    - The classroom is a computer lab, so all assignments can be completed using your computer. Computation is supported by [Neurodesk play](https://play.neurodesk.org/). Our goal is to leverage and extend [NeurodeskEDU](https://neurodesk.org/edu/intro.html)
   - MRI physics: Image Acquisition.
     - [Terrific videos](https://magritek.com/resources/videos/) (from a company that makes a unique instructional MRI system
   - MRI physics: Image Contrast.
@@ -38,7 +41,7 @@ Functional magnetic resonance imaging is a recent and powerful tool for inferrin
     - [Undistorting fMRI EPI data using the SPM FieldMap toolbox](../fieldmaps/index.md).
   - Temporal Processing
     - [Interactive filtering demo](https://github.com/neurolabusc/biquad-filter) shows how low-pass, high-pass and notch filters modulate a signal.
-    - [Physiological Artifact Removal Tool](https://github.com/neurolabusc/Part) .
+    - [Physiological Artifact Removal Tool](https://github.com/neurolabusc/Part).
   - FSL and SPM. Hands on demonstrations
     - [fMRI analysis](https://people.cas.sc.edu/rorden/tutorial/index.html).
     - [FSL: block design](https://people.cas.sc.edu/rorden/tutorial/html/block.html).
@@ -53,8 +56,30 @@ Functional magnetic resonance imaging is a recent and powerful tool for inferrin
   - Brain stimulation: Transcranial Magnetic Stimulation (TMS), Transcranial Direct Current Stimulation (tDCS). Roger Newman-Norlund and Chris Rorden
   - Graduate student presentations: Resting state analysis, effective and functional connectivity, independent components analysis, neural current MRI?
 
+### Calendar [Spring 2026](https://sc.edu/about/offices_and_divisions/registrar/academic_calendars/2025-26_calendar.php)
+
+| Tuesday | Thursday |
+|--------|----------|
+| Tu 13 Jan Introduction to course | Th 15 Jan Lab: Neurodesk |
+| Tu 20 Jan Image Visualization, Safety | Th 22 Jan Lab: Visualization |
+| Tu 27 Jan MRI Physics: basics | Th 29 Jan Lab: fslmaths, bet|
+| Tu 3 Feb MRI physics: contrast | Th 5 Feb Fieldtrip: [MRI scanner](https://sc.edu/study/colleges_schools/artsandsciences/centers_and_institutes/mccausland_center/) |
+| Tu 10 Feb fMRI signal and design | Th 12 Feb Lab: fMRI |
+| Tu 17 Feb fMRI statistics | Th 19 Feb Lab: fMRI statistics|
+| Tu 24 Feb Spatial processing | Th 26 Feb Lab: Spatial processing|
+| Tu 3 Mar Temporal processing | Th 5 Mar Lab: Temporal processing|
+| Tu 10 Mar Spring Break (no classes) | Th 12 Mar Spring Break (no classes) |
+| Tu 17 Mar VBM| Th 19 Mar Lab: VBM|
+| Tu 24 Mar DWI | Th 26 Mar Lab: DWI|
+| Tu 31 Mar Brain Injury, VLSM | Th 2 April Lab: VLSM|
+| Tu 7 Apr Brain Stimulation | Th 9 Apr Lab: Help with final|
+| Tu 14 Apr Machine Learning: AI | Th 16 Apr Lab: Machine learning |
+| Tu 21 Apr Presentations | Th 23 Apr Presentations |
+
+[Final Project Deadline](https://sc.edu/about/offices_and_divisions/registrar/final_exams/final-exams-spring-2026.php) Tuesday, May 5 - 9:00 a.m.
+
 ### Links
 
  - [Rik Henson’s fMRI mini-course](https://imaging.mrc-cbu.cam.ac.uk/imaging/SpmMiniCourse)
  - [FSL course](https://open.win.ox.ac.uk/pages/fslcourse/website/index.html)
- - [SPM course](https://www.fil.ion.ucl.ac.uk/spm/course/) , and the [SPM8 manual](https://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf)
+ - [AFNI course](https://cbmm.mit.edu/afni)
