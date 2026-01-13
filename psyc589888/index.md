@@ -4,8 +4,8 @@
 
 ### Details:
 
-PSYC 888 CRN 49444
-PSYC 589 CRN 44362
+PSYC 888 graduate [CRN 49444](https://classes.sc.edu/?details&srcdb=202601&crn=49444)
+PSYC 589 undergraduate [CRN 44362](https://classes.sc.edu/?details&srcdb=202601&crn=44362)
 TTh 10:05am-11:20am in 
  - Course Title: “Neuroimaging: from image to inference”.
  - Instructor: [Dr Chris Rorden](https://neurolabusc.github.io/crnl/about/) : Office 138 Discovery I
@@ -13,8 +13,9 @@ TTh 10:05am-11:20am in
  - Course Code: [PSYC589](https://classes.sc.edu/?details&srcdb=202601&crn=44362) (Undergrad, CRN 44362) [PSYC888](https://classes.sc.edu/?details&srcdb=202601&crn=49444)(Grad, CRN49444) PSYC 888,3 credits. In addition, scientists are free to audit this course. Suitable for faculty, post-docs, PhD students and advanced undergraduate students.
  - When: Spring 2026 T/Th 10:05am-11:20am, 13 Jan - 23 Apr
  - Where: [Discovery I Building](https://sc.edu/visit/map/?id=744#!m/223310?share) Room 259
- - Formal [Syllabus](https://docs.google.com/document/d/1Wd2daWbyBJ_0i-MLrjuw1ZMZIAg8IcfU/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true)
+ - Formal [Syllabus](https://docs.google.com/document/d/1518l1OrFd3vWlJdpydBl-zF1n-uiakhk/edit?usp=sharing&ouid=101539764775409240375&rtpof=true&sd=true)
  - Course slides: [Google Slides](https://docs.google.com/presentation/d/15v3TvxnCAj4wJQm7IWIM6lpEmKUox1Z6DpINysKSmLM/edit?usp=sharing)
+ - Supercomputer instances: [neurodeskEDU](https://edu.neurodesk.org)
  - License: [the slides and material for this course are distributed under the Creative Commons license](https://creativecommons.org/licenses/by/3.0/) . Further details are in the notes section of the PowerPoint file.
 - Textbook: [Functional Magnetic Resonance Imaging by Huettel, Song, and McCarthy](https://www.amazon.com/Functional-Magnetic-Resonance-Imaging-Second/dp/0878932860/).
 - Supplemental textbook: [Poldrack et al.](https://www.amazon.com/Handbook-Functional-MRI-Data-Analysis/dp/0521517664).
@@ -22,6 +23,8 @@ TTh 10:05am-11:20am in
 ### Description:
 
 Functional magnetic resonance imaging is a recent and powerful tool for inferring brain function. This technique identifies brain regions that are activated by different tasks – for example we can find the brain regions that activate when someone sees a familiar face. This course is designed to give students an understanding of the potential and limitations of this technique, and the ability to critically evaluate the inferences that can be drawn from fMRI. The course describes all stages of an fMRI study – from the design of the behavioral task (e.g. asking the participant to view faces), to the image processing (e.g. correcting images for head movements that occurred during scanning), through to statistical analysis (identifying brain regions that are activated by a task).
+
+This laboratory course offers hands-on STEM training with a focus on magnetic resonance imaging (MRI). Students develop a foundational understanding of MRI physics and gain direct experience with image acquisition. They also use [NeurodeskEDU high-performance computing]((https://github.com/neurodesk/neurodeskedu)) tools to preprocess, analyze, and visualize neuroimaging data, applying both classical and artificial intelligence–based methods. Through these activities, students learn how MRI advances our understanding of the human mind and functions as a transformative tool in clinical practice.
 
 ### Lectures
 
@@ -70,8 +73,8 @@ Functional magnetic resonance imaging is a recent and powerful tool for inferrin
 | Tu 3 Mar Temporal processing | Th 5 Mar Lab: Temporal processing|
 | Tu 10 Mar Spring Break (no classes) | Th 12 Mar Spring Break (no classes) |
 | Tu 17 Mar VBM| Th 19 Mar Lab: VBM|
-| Tu 24 Mar DWI | Th 26 Mar Lab: DWI|
-| Tu 31 Mar Brain Injury, VLSM | Th 2 April Lab: VLSM|
+| Tu 24 Mar Bob Rafal Lesions | Th 26 Mar Lab: VLSM|
+| Tu 31 Mar Diffusion | Th 2 Lab: DWI |
 | Tu 7 Apr Brain Stimulation | Th 9 Apr Lab: Help with final|
 | Tu 14 Apr Machine Learning: AI | Th 16 Apr Lab: Machine learning |
 | Tu 21 Apr Presentations | Th 23 Apr Presentations |
