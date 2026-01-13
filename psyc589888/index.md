@@ -4,9 +4,6 @@
 
 ### Details:
 
-PSYC 888 graduate [CRN 49444](https://classes.sc.edu/?details&srcdb=202601&crn=49444)
-PSYC 589 undergraduate [CRN 44362](https://classes.sc.edu/?details&srcdb=202601&crn=44362)
-TTh 10:05am-11:20am in 
  - Course Title: “Neuroimaging: from image to inference”.
  - Instructor: [Dr Chris Rorden](https://neurolabusc.github.io/crnl/about/) : Office 138 Discovery I
  - Lab Manager:  [Dr Makayla Gibson](https://neurolabusc.github.io/crnl/about/)
